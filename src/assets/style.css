@@ -1,0 +1,31 @@
+.MuiTab-root {
+    color: #999 !important;
+}
+
+.Mui-selected {
+    color: yellow !important;
+}
+
+.MuiTabs-indicator {
+    background-color: yellow !important;
+}
+
+input[type=file]::file-selector-button {
+    border: 2px solid #c8d1ce;
+    /* padding: .2em .4em; */
+    border-radius: .2em;
+    background-color: transparent;
+    transition: 1s;
+    padding: 7px 4px;
+}
+
+.file-input input {
+    border: 1px solid #c8d1ce;
+    border-radius: .2em;
+    width: 100%;
+    /* padding: 5px 0px; */
+}
+
+button:disabled {
+    opacity: 0.5;
+}
