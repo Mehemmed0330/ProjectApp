@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function OrderHistory() {
     return (
-        <div>
-            OrderHistory
+        <div className="pl-72 pr-2 ">
+            Order History
         </div>
     )
 }

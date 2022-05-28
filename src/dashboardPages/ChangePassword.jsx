@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function ChangePassword() {
     return (
-        <div>
-            ChangePassword
+        <div className="pl-72 pr-2 ">
+            Change Password
         </div>
     )
 }

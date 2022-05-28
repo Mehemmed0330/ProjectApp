@@ -1,11 +1,25 @@
 import { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import UserNavbar from './UserNavbar';
+import AccountInfo from "../dashboardPages/AccountInfo";
+import ActiveOrders from '../dashboardPages/ActiveOrders';
+import OrderHistory from '../dashboardPages/OrderHistory';
+import SavedAddresses from '../dashboardPages/SavedAddresses';
+import ChangePassword from '../dashboardPages/ChangePassword';
+
 // import Icon from '@material-tailwind/react/Icon';
 // import h1 from '@material-tailwind/react/Heading6';
 
 export default function Sidebar() {
     const [showSidebar, setShowSidebar] = useState('-left-64');
+    const [index, setIndex] = useState(0);
+    const link = [
+        { name: "Account info", to: 0 },
+        { name: "Active orders", to: 1 },
+        { name: "Order history", to: 2 },
+        { name: "Saved addresses", to: 3 },
+        { name: "Change password", to: 4 },
+    ]
     return (
         <div>
             <UserNavbar
@@ -28,55 +42,18 @@ export default function Sidebar() {
                         <hr className="my-4 min-w-full" />
 
                         <ul className="flex-col min-w-full flex list-none">
-                            <li className="rounded-lg mb-4 hover:bg-yellow-300 ">
-                                <NavLink
-                                    to="/dashboard/activeOrders"
-                                    exact
-                                    className="flex items-center gap-4 text-sm text-gray-700 font-semibold	  px-4 py-3 rounded-lg"
+                            {link.map((page, index) =>
+                                <li
+                                    onClick={() => setIndex(page.to)}
+                                    key={index}
+                                    className="flex items-center justify-center gap-4 text-sm text-gray-700 font-semibold px-4 py-3  rounded-lg mb-4 hover:bg-yellow-300 cursor-pointer"
                                 >
                                     {/* <Icon name="dashboard" size="2xl" /> */}
-                                    Active orders
-                                </NavLink>
-                            </li>
-                            <li className="rounded-lg mb-2 hover:bg-yellow-300 ">
-                                <NavLink
-                                    to="/dashboard/orderHistory"
-                                    className="flex items-center gap-4 text-sm text-gray-700  font-semibold px-4 py-3 rounded-lg"
-                                    activeClassName="bg-gradient-to-tr from-light-blue-500 to-light-blue-700 text-white shadow-md"
-                                >
-                                    {/* <Icon name="settings" size="2xl" /> */}
-                                    Order history
-                                </NavLink>
-                            </li>
-                            <li className="rounded-lg mb-2 hover:bg-yellow-300 ">
-                                <NavLink
-                                    to="/dashboard/savedAddresses"
-                                    className="flex items-center gap-4 text-sm text-gray-700 font-semibold px-4 py-3 rounded-lg"
-                                >
-                                    {/* <Icon name="toc" size="2xl" /> */}
-                                    Saved Addresses
-                                </NavLink>
-                            </li>
-                            <li className="rounded-lg mb-2 hover:bg-yellow-300">
-                                <Link
-                                    to="/dashboard/accountInfo"
-                                    className="flex items-center gap-4 text-sm text-gray-700 font-semibold px-4 py-3 rounded-lg"
-                                // activeClassName="bg-gradient-to-tr from-light-blue-500 to-light-blue-700 text-white shadow-md"
-                                >
-                                    {/* <Icon name="map" size="2xl" /> */}
-                                    Account Info
-                                </Link>
-                            </li>
-                            <li className="rounded-lg mb-2 hover:bg-yellow-300">
-                                <NavLink
-                                    to="/dashboard/changePassword"
-                                    className="flex items-center gap-4 text-sm text-gray-700 font-semibold px-4 py-3 rounded-lg"
-                                    activeClassName="bg-gradient-to-tr from-light-blue-500 to-light-blue-700 text-white shadow-md"
-                                >
-                                    {/* <Icon name="map" size="2xl" /> */}
-                                    Change Password
-                                </NavLink>
-                            </li>
+                                    {page.name}
+
+                                </li>
+                            )}
+
 
                         </ul>
 
@@ -105,6 +82,21 @@ export default function Sidebar() {
                         </ul> */}
                     </div>
                 </div>
+            </div>
+            <div hidden={index !== 0}>
+                <AccountInfo />
+            </div>
+            <div hidden={index !== 1}>
+                <ActiveOrders />
+            </div>
+            <div hidden={index !== 2}>
+                <OrderHistory />
+            </div>
+            <div hidden={index !== 3}>
+                <SavedAddresses />
+            </div>
+            <div hidden={index !== 4}>
+                <ChangePassword />
             </div>
         </div>
     );

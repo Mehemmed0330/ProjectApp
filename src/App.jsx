@@ -17,11 +17,7 @@ import Dashboard from "./components/Dashboard"
 import ForgotPassword from "./components/ForgotPassword"
 import ResetPassword from "./components/ResetPassword"
 
-import ActiveOrders from './dashboardComponents/ActiveOrders'
-import OrderHistory from './dashboardComponents/OrderHistory'
-import AccountInfo from './dashboardComponents/AccountInfo'
-import ChangePassword from './dashboardComponents/ChangePassword'
-import SavedAddresses from './dashboardComponents/SavedAddresses'
+
 
 
 export default function App() {
@@ -45,14 +41,6 @@ export default function App() {
         <Route path="/resetPassword" element={<ResetPassword />} />
         {/* <Route path="/accountInfo" element={<AccountInfo />} /> */}
         <Route path="/dashboard" element={<Dashboard />} >
-          <Route path="/dashboard/activeOrders" element={<ActiveOrders />} />
-          <Route path="/dashboard/orderHistory" element={<OrderHistory />} />
-          <Route path="/dashboard/accountInfo" element={<AccountInfo />} />
-          <Route path="/dashboard/changePassword" element={<ChangePassword />} />
-          <Route path="/dashboard/savedAddresses" element={<SavedAddresses />} />
-
-
-
         </Route>
         <Route />
       </Routes>
