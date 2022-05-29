@@ -50,7 +50,6 @@ export default function Sidebar() {
                                 >
                                     {/* <Icon name="dashboard" size="2xl" /> */}
                                     {page.name}
-
                                 </li>
                             )}
 

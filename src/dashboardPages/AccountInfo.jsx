@@ -1,9 +1,28 @@
 import React from 'react'
 
-export default function AcccountInfo() {
+export default function AccountInfo() {
     return (
         <div className="pl-72 pr-2 ">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam incidunt ipsa molestiae earum nihil. Ratione officia mollitia possimus tenetur vitae ipsum tempore, nam odio fugiat, et eveniet doloribus dolorem, aliquam voluptas quia voluptate impedit quis quasi facilis. Nesciunt fuga modi quibusdam voluptate, ipsam voluptas voluptatum error ratione iste deleniti accusantium.
+            <div class="text-center">
+                <img
+                    src="https://mdbcdn.b-cdn.net/img/new/avatars/8.webp"
+                    class="rounded-full w-32 mb-4 mx-auto"
+                    alt="Avatar"
+                />
+                <div className="flex justify-center mb-2">
+                    <span className="text-xl font-medium leading-tight ">Ad:</span><h5 class="text-xl font-bold leading-tight  ml-2">John Doe</h5>
+
+                </div>
+                <div className="flex justify-center items-center mb-2">
+                    <span className="text-xl font-medium leading-tight ">Email:</span><p class="text-gray-500 text-xl ml-2">mehemmedeliyevn0330@gmail.com</p>
+                </div>
+                <div className="flex justify-center mb-2">
+                    <span className="text-xl font-medium leading-tight ">Phone:</span><p class="text-gray-500 text-lg ml-2">994505188255</p>
+                </div>
+                <div className="flex justify-center mb-2">
+                    <span className="text-xl font-medium leading-tight ">Point:</span><p class="text-gray-500 text-lg ml-2">0</p>
+                </div>
+            </div>
         </div>
     )
 }

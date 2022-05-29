@@ -66,13 +66,13 @@ export default function AdminNavbar({ showSidebar, setShowSidebar }) {
                     </div>
                 </div>
 
-                <div className="flex justify-between items-center w-full">
+                {/* <div className="flex justify-between items-center w-full">
                     <h4 className="uppercase text-black text-sm tracking-wider mt-1">
-                        {/* {location.toUpperCase().replace('/', '')} */}
+                        {location.toUpperCase().replace('/', '')}
                     </h4>
 
                     <div className="flex items-center">
-                        {/* <Input placeholder="Search" /> */}
+                        <Input placeholder="Search" />
                         <span>Aliev Muhammad</span>
 
                         <div className="-mr-4 ml-6">
@@ -150,7 +150,7 @@ export default function AdminNavbar({ showSidebar, setShowSidebar }) {
                             </Menu>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
         </nav>
     );
