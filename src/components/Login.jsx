@@ -22,6 +22,7 @@ export default function Login() {
             axios.post('http://144.91.97.115:9090/api/v1/customer/Account/Authenticate', data)
                 .then(res => {
                     localStorage.setItem('token', res.data.result.jwtToken);
+                    console.log(res.data)
                 })
                 .catch(err => {
                     Swal.fire({

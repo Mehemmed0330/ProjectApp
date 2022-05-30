@@ -20,18 +20,19 @@ export default function beCustomer() {
     const [loadingSubmit, setLoadingSubmit] = useState(false);
 
 
-    const data = {
-        "firstname": firstName,
-        "lastname": lastName,
-        "phoneNumber": phone,
-        "password": null,
-        "email": email,
 
-
-    }
 
     const postRegisterCustomer = (e) => {
         e.preventDefault();
+        const data = {
+            "firstname": firstName,
+            "lastname": lastName,
+            "phoneNumber": phone,
+            "password": null,
+            "email": email,
+
+
+        }
 
         setLoadingSubmit(true);
 
@@ -53,7 +54,7 @@ export default function beCustomer() {
 
             alert('sms show')
 
-            axios.post('http://144.91.97.115:9090​/api​/v1​/customer​/Account​/Register', data)
+            axios.post('http://144.91.97.115:9090/api/v1/customer/Account/Register', data)
                 .then(res => {
                     Swal.fire({
                         title: 'Success',
@@ -75,7 +76,7 @@ export default function beCustomer() {
                     setLoadingSubmit(false);
                 })
         } else {
-            axios.post('http://144.91.97.115:9090​/api/v1/customer/Account/RegisterConfirm', data)
+            axios.post('http://144.91.97.115:9090/api/v1/customer/Account/RegisterConfirm', data)
                 .then(res => {
                     // Swal.fire({
                     //     title: 'Success',
@@ -83,12 +84,13 @@ export default function beCustomer() {
                     //     icon: 'success',
                     //     confirmButtonText: 'OK'
                     // })
+                    console.log(res)
                     setSmsShow(true);
                 })
                 .catch(err => {
                     Swal.fire({
                         title: 'Error',
-                        text: err.response,
+                        text: err.response.data.result,
                         icon: 'error',
                         confirmButtonText: 'OK'
                     })
