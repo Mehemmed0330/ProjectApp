@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
+import { useSelector } from "react-redux"
+import { selectUser } from "../redux/userSlice"
 import UserNavbar from './UserNavbar';
 import AccountInfo from "../dashboardPages/AccountInfo";
 import ActiveOrders from '../dashboardPages/ActiveOrders';
@@ -7,10 +9,13 @@ import OrderHistory from '../dashboardPages/OrderHistory';
 import SavedAddresses from '../dashboardPages/SavedAddresses';
 import ChangePassword from '../dashboardPages/ChangePassword';
 
+
 // import Icon from '@material-tailwind/react/Icon';
 // import h1 from '@material-tailwind/react/Heading6';
 
 export default function Sidebar() {
+    const user = useSelector(selectUser)
+
     const [showSidebar, setShowSidebar] = useState('-left-64');
     const [index, setIndex] = useState(0);
     const link = [
@@ -36,7 +41,7 @@ export default function Sidebar() {
                         rel="noreferrer"
                         className="mt-2 text-center w-full inline-block"
                     >
-                        <h1 color="gray">Muhammad Aliev</h1>
+                        <h1 color="gray"></h1>
                     </a>
                     <div className="flex flex-col">
                         <hr className="my-4 min-w-full" />

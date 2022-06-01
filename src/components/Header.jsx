@@ -3,6 +3,9 @@ import { NavLink } from "react-router-dom";
 import Logo from "../assets/Logo.svg"
 import { useState } from "react"
 
+import { useSelector } from "react-redux"
+import { selectUser } from "../redux/userSlice"
+
 
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -55,6 +58,7 @@ export default function Header() {
         setAnchorEl(null);
     };
     const [openMenu, setOpenMenu] = useState(false);
+    const user = useSelector(selectUser)
 
     return (
         <div>
@@ -128,7 +132,7 @@ export default function Header() {
                                     ))}
                                 </Menu>
                             </div>
-                            {afterLink.map((page, index) =>
+                            {user ? user.fullName : afterLink.map((page, index) =>
                                 <NavLink onClick={() => setOpenMenu(false)} to={`${page.to}`}
                                     style={({ isActive }) =>
                                         isActive ? { backgroundColor: "rgb(253,224,71)", color: "black" } : undefined

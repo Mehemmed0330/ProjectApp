@@ -2,12 +2,17 @@ import { useState } from "react";
 import axios from "axios";
 import Swal from 'sweetalert2'
 import { Link } from "react-router-dom"
+import { useDispatch } from 'react-redux'
+import { login } from "../redux/userSlice"
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
     const [phone, setPhone] = useState('');
     const [pass, setPass] = useState('');
     const [type, setType] = useState('1');
     const [loadingSubmit, setLoadingSubmit] = useState(false);
+    const dispatch = useDispatch();
+    const navigate = useNavigate()
     const handleSubmit = (e) => {
         e.preventDefault()
 
@@ -22,7 +27,14 @@ export default function Login() {
             axios.post('http://144.91.97.115:9090/api/v1/customer/Account/Authenticate', data)
                 .then(res => {
                     localStorage.setItem('token', res.data.result.jwtToken);
-                    console.log(res.data)
+                    localStorage.setItem('fullName', res.data.result.fullname);
+                    console.log(res.data.result)
+                    const fullName = res.data.result.fullname
+                    console.log(fullName)
+                    dispatch(login({
+                        fullName: fullName
+                    }));
+
                 })
                 .catch(err => {
                     Swal.fire({
@@ -53,6 +65,7 @@ export default function Login() {
                 })
                 .finally(() => setLoadingSubmit(false))
         }
+        navigate("/dashboard")
     }
 
 

@@ -70,7 +70,7 @@ export default function AutoPlay() {
         <div class="py-4 px-2">
             <Slider {...settings}>
                 <div>
-                    <div class="bg-yellow-300 min-h-40 md:mx-5  xl:w-96  xl:flex xl:items-center justify-between xl:px-2 px-5 py-4 text-center  ">
+                    <div class="bg-yellow-300 h-52 min-h-full md:mx-5  xl:w-96  xl:flex xl:items-center justify-between xl:px-2 px-5 py-4 text-center  ">
                         <div class="w-24  h-24 rounded-full object-cover mx-auto">
                             <img src={FeedbackFirst} alt="" class="rounded-full" />
                         </div>
@@ -79,14 +79,14 @@ export default function AutoPlay() {
                                 <h1 class="font-bold">Lorem ipsum</h1>
                             </div>
                             <div class="mt-2" >
-                                <p class="xl:text-sm font-medium text-xs	">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo molestiae suscipit cupiditate quasi quod nostrum</p>
+                                <p class="xl:text-sm font-medium text-xs	">Misafirlerim vardı uygulamadan bi şoför çağırdım ve iş yerinden çıkmama gerek kalmadan şoför geldi aracımı aldı misafirlerimi gidecekleri yere bıraktı ve aracımı tekrar aldığı yere teslim etti.Sorunsuzdu teşekkür ederim.</p>
                             </div>
                         </div>
 
                     </div>
                 </div>
                 <div>
-                    <div class="bg-yellow-300 min-h-40 md:mx-5  xl:w-96  xl:flex xl:items-center justify-between xl:px-2 px-5 py-4 text-center  ">
+                    <div class="bg-yellow-300 h-52 min-h-full md:mx-5  xl:w-96  xl:flex xl:items-center justify-between xl:px-2 px-5 py-4 text-center  ">
                         <div class="w-24  h-24 rounded-full object-cover mx-auto">
                             <img src={FeedbackFirst} alt="" class="rounded-full" />
                         </div>
@@ -95,13 +95,13 @@ export default function AutoPlay() {
                                 <h1 class="font-bold">Lorem ipsum</h1>
                             </div>
                             <div class="mt-2" >
-                                <p class="xl:text-sm font-medium text-xs	">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo molestiae suscipit cupiditate quasi quod nostrum</p>
+                                <p class="xl:text-sm font-medium text-xs	">Uygulama gerçekten çok kolay ve kullanışlı. 15 dkka içinde şoförüm geldi. Hele şoförümüz inanılmazdı. Çok kibar profesyonel, gerçekten kendimi vip müşteri gibi hissettim :)</p>
                             </div>
                         </div>
 
                     </div>
                 </div><div>
-                    <div class="bg-yellow-300 min-h-40 md:mx-5  xl:w-96  xl:flex xl:items-center justify-between xl:px-2 px-5 py-4 text-center  ">
+                    <div class="bg-yellow-300 h-52 min-h-full md:mx-5  xl:w-96  xl:flex xl:items-center justify-between xl:px-2 px-5 py-4 text-center  ">
                         <div class="w-24  h-24 rounded-full object-cover mx-auto">
                             <img src={FeedbackFirst} alt="" class="rounded-full" />
                         </div>
@@ -110,13 +110,14 @@ export default function AutoPlay() {
                                 <h1 class="font-bold">Lorem ipsum</h1>
                             </div>
                             <div class="mt-2" >
-                                <p class="xl:text-sm font-medium text-xs	">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo molestiae suscipit cupiditate quasi quod nostrum</p>
+                                <p class="xl:text-sm font-medium text-xs	">Kardeşimi havalimanından almak için kullandım.Avrupa Yakasında oturuyorum uygulama ile şoför geldi aracı aldı Sabiha dan kardeşimi aldı getirdi, helal olsun harika bir uygulama.</p>
                             </div>
                         </div>
 
                     </div>
-                </div><div>
-                    <div class="bg-yellow-300 min-h-40 md:mx-5  xl:w-96  xl:flex xl:items-center justify-between xl:px-2 px-5 py-4 text-center  ">
+                </div>
+                <div>
+                    <div class="bg-yellow-300 h-52 min-h-full md:mx-5  xl:w-96  xl:flex xl:items-center justify-between xl:px-2 px-5 py-4 text-center  ">
                         <div class="w-24  h-24 rounded-full object-cover mx-auto">
                             <img src={FeedbackFirst} alt="" class="rounded-full" />
                         </div>
@@ -125,7 +126,58 @@ export default function AutoPlay() {
                                 <h1 class="font-bold">Lorem ipsum</h1>
                             </div>
                             <div class="mt-2" >
-                                <p class="xl:text-sm font-medium text-xs	">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo molestiae suscipit cupiditate quasi quod nostrum</p>
+                                <p class="xl:text-sm font-medium text-xs	">İlgili bir kurum ve kibar, düzgün, kaliteli şöför hizmeti.Hem de kendi aracın ile isteğin yere seni götürüyor. Araç kullanamayacak durumdalarda imdadımıza yetişti.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div>
+                    <div class="bg-yellow-300 h-52 min-h-full md:mx-5  xl:w-96  xl:flex xl:items-center justify-between xl:px-2 px-5 py-4 text-center  ">
+                        <div class="w-24  h-24 rounded-full object-cover mx-auto">
+                            <img src={FeedbackFirst} alt="" class="rounded-full" />
+                        </div>
+                        <div class="xl:w-4/6 w-full	">
+                            <div>
+                                <h1 class="font-bold">Lorem ipsum</h1>
+                            </div>
+                            <div class="mt-2" >
+                                <p class="xl:text-sm font-medium text-xs	">Önce fiyatlardan biraz çekindim ama kullandığın kadar ödeme olayı çok iyi. Ücretler gayet makul inşallah böyle devam eder.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div>
+                    <div class="bg-yellow-300 h-52 min-h-full md:mx-5  xl:w-96  xl:flex xl:items-center justify-between xl:px-2 px-5 py-4 text-center  ">
+                        <div class="w-24  h-24 rounded-full object-cover mx-auto">
+                            <img src={FeedbackFirst} alt="" class="rounded-full" />
+                        </div>
+                        <div class="xl:w-4/6 w-full	">
+                            <div>
+                                <h1 class="font-bold">Lorem ipsum</h1>
+                            </div>
+                            <div class="mt-2" >
+                                <p class="xl:text-sm font-medium text-xs	">Şimdiye kadar neredeydin Bi Şoför. Artık evlere bırakma servis şoförlüğümden istifa ettim yerimi bi şoför aldı. Çok mutluyum 😀.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div>
+                    <div class="bg-yellow-300 h-52 min-h-full md:mx-5  xl:w-96  xl:flex xl:items-center justify-between xl:px-2 px-5 py-4 text-center  ">
+                        <div class="w-24  h-24 rounded-full object-cover mx-auto">
+                            <img src={FeedbackFirst} alt="" class="rounded-full" />
+                        </div>
+                        <div class="xl:w-4/6 w-full	">
+                            <div>
+                                <h1 class="font-bold">Lorem ipsum</h1>
+                            </div>
+                            <div class="mt-2" >
+                                <p class="xl:text-sm font-medium text-xs	">Uygulamayı indirdiğinden beri neredeyse hergün kullanıyorum, hayatımı kolaylaştırdı. Kendi aracım ile istediğim yere özel şoför hizmeti çok uygun fiyatlarla..</p>
                             </div>
                         </div>
 

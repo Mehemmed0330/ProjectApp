@@ -1,6 +1,9 @@
 import React from 'react'
+import { useSelector } from "react-redux";
+import { selectUser } from "../redux/userSlice";
 
 export default function AccountInfo() {
+    const user = useSelector(selectUser)
     return (
         <div className="pl-72 pr-2 ">
             <div class="text-center">
@@ -10,7 +13,7 @@ export default function AccountInfo() {
                     alt="Avatar"
                 />
                 <div className="flex justify-center mb-2">
-                    <span className="text-xl font-medium leading-tight ">Ad:</span><h5 class="text-xl font-bold leading-tight  ml-2">John Doe</h5>
+                    <span className="text-xl font-medium leading-tight ">Ad:</span><h5 class="text-xl font-bold leading-tight  ml-2"></h5>
 
                 </div>
                 <div className="flex justify-center items-center mb-2">
