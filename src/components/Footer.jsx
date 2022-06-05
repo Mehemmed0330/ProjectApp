@@ -14,9 +14,9 @@ export default function Footer() {
                     <img src={Logo} alt="" className="w-48 mx-auto" />
                 </div>
                 <div className="xl:w-1/5 xl:mx-0 mx-auto ">
-                    <div>
-                        <div className="text-3xl font-medium text-yellow-300">Adres</div>
-                        <div className="text-lg text-yellow-300 my-5 ">Trump Towers <br />
+                    <div className="text-center">
+                        <div className="text-3xl font-medium text-yellow-300 text-center">Adres</div>
+                        <div className="text-lg text-yellow-300 my-5 text-center">Trump Towers <br />
                             İstanbul / Şişli <br />
                             Mecidiyeköy Yolu Caddesi No:12</div>
                     </div>
@@ -48,7 +48,7 @@ export default function Footer() {
                 </div>
             </div>
             <hr class="my-6 border-yellow-300 sm:mx-auto  lg:my-8" />
-            <span class="block text-sm text-yellow-300 sm:text-center text-center ">© 2022 <a href="https://flowbite.com" class="hover:underline">BiŞoför™</a>.Tüm hakları Saklıdır.
+            <span class="block text-sm text-yellow-300 sm:text-center text-center ">© 2022 <a href="" class="hover:underline">BiŞoför™</a>.Tüm hakları Saklıdır.
             </span>
         </div>
     )

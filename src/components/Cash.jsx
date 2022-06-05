@@ -155,7 +155,7 @@ export default function Cash() {
         //         </div>
         //     </div>
         // </div >
-        <div class="h-96 text-center flex align-center justify-center flex-col text-2xl my-5">
+        <div class="h-96 text-center flex align-center justify-center flex-col text-2xl py-5 bg-yellow-300">
             Ücretlendirme politikamızda siz değerli müşterilerimize daha faydalı olabilmek için, yolculuğunuz km ve zaman dikkate alınarak hesaplanmaktadır.
 
         </div>

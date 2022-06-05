@@ -6,16 +6,16 @@ import CompanyThird from "../assets/CompanyPictureThird.jpg"
 export default function Companies() {
     return (
         <div>
-            <div className="px-4 pb-5 flex  flex-wrap justify-center	">
-                <div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 m-2">
+            <div className="px-4 pb-5 flex  flex-wrap justify-center bg-yellow-300	">
+                <div className="bg-yellow-300 max-w-sm  rounded-lg border border-black shadow-md   m-2">
                     <div>
                         <img src={CompanyFirst} className="rounded-t-lg" alt="" />
                     </div>
                     <div className="p-5">
                         <div>
-                            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Alkollü Araç Kullanımı</h5>
+                            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">Alkollü Araç Kullanımı</h5>
                         </div>
-                        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Kaza riskleri nedeniyle trafik polisi için, sürücülerin alkol kontrolünün özel bir önemi vardır. Sürücü, alkolmetre ile yapılan test sonucunda alkollü çıkarsa; 2918 Sayılı Karayolları Trafik Kanunu'nun 48/5 maddesi gereğince para cezası ile cezalandırılır, aracı trafikten men edilir ve sürücü belgesi (6) ay süreyle Trafik Polisince geri alınır.
+                        <p className="mb-3 font-normal text-gray-700 ">Kaza riskleri nedeniyle trafik polisi için, sürücülerin alkol kontrolünün özel bir önemi vardır. Sürücü, alkolmetre ile yapılan test sonucunda alkollü çıkarsa; 2918 Sayılı Karayolları Trafik Kanunu'nun 48/5 maddesi gereğince para cezası ile cezalandırılır, aracı trafikten men edilir ve sürücü belgesi (6) ay süreyle Trafik Polisince geri alınır.
 
                             Aynı sürücü aynı suçu işlerse;yine Kanun'un ilgili maddesi gereğince para cezası ile cezalandırılır, aracı trafikten men edilir ve sürücü belgesi (2) yıl süreyle Trafik Polisi'nce geri alınır. Aynı sürücü üçüncü kez alkollü olarak araç kullanırken tespit edilirse, kanunun ilgili maddesinde belirtildiği şekilde para cezası ile cezalandırılır, aracı trafikten men edilir ve sürücü belgesi (5) yıl süreyle Trafik Polisi'nce geri alınır. Ayrıca (6) aydan az olmamak üzere hafif hapis cezası uygulanılır. (5) yıl süreyle geri alınan sürücü belgesi sahipleri, 5. yılın sonunda, psiko-teknik değerlendirme ve psikiyatri muayenesi sonrasında durumu uygun olanlara belgeleri iade edilir.
                             Alkollü araç kullanmaktan dolayı sürücü belgeleri geri alınan sürücüler, Sürücü belgesine el koyan trafik birimine veya en yakın trafik Denetleme Şube Müdürlüğü'ne alıkoyma süresinin bitiminde dilekçe ile başvurarak sürücü belgelerini geri alabilirler.
@@ -26,19 +26,19 @@ export default function Companies() {
 
                     </div>
                 </div>
-                <div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 m-2">
+                <div className="bg-yellow-300 max-w-sm  rounded-lg border border-black shadow-md   m-2">
                     <div>
                         <img src={CompanySecond} className="rounded-t-lg" alt="" />
                     </div>
                     <div className="p-5">
                         <div>
-                            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">
                                 Alkollü Araç Kullanma Cezası
                                 Karayolları Trafik Kanunu Md. 48/5‘e göre 2022 yılı Cezaları;
 
                             </h5>
                         </div>
-                        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">İlk kez alkollü araç kullanan kişi 1823 TL,
+                        <p className="mb-3 font-normal text-gray-700 ">İlk kez alkollü araç kullanan kişi 1823 TL,
                             İkinci kez alkollü araç kullanan kişi 2287 TL,
                             Üçüncü kez alkollü araç kullanan kişi 3675 TL dir.
                             Kesilen para cezaları 15 gün içerisinde ödendiği takdirde %25 indirimli şekilde ödenebilmektedir. 30 gün içerisinde ödenmediği takdirde faiz işleyip, Amme Alacaklarının Tahsili Usulü Hakkında Kanun hükümlerine göre icra yoluyla tahsil edilecektir. Para Cezasının taksitlendirilmesi mümkün olup Vergi Dairesine müracaat ederek 4 taksit yapılabilecektir.
@@ -57,15 +57,16 @@ export default function Companies() {
                         </p>
 
                     </div>
-                </div> <div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 m-2">
+                </div>
+                <div className="bg-yellow-300 max-w-sm  rounded-lg border border-black shadow-md   m-2">
                     <div>
                         <img src={CompanyThird} className="rounded-t-lg" alt="" />
                     </div>
                     <div className="p-5">
                         <div>
-                            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Emniyet Şeridi Cezası 2022 Ücretleri</h5>
+                            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">Emniyet Şeridi Cezası 2022 Ücretleri</h5>
                         </div>
-                        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Trafik ekiplerinin denetimleri sonucunda emniyet şeridi ihlali yapan sürücülere ceza kesme işlemi uygulanıyor. Aynı zamanda elektronik denetleme sistemleri ile şerit ihlallerini plaka üzerinden takip ederek trafik cezasına dönüştürülüyor. Emniyet şeridini uygunsuz kullanma cezası 2022 itibarıyla 1.823 TL tutarında. Ceza kesildikten itibaren 15 gün içinde ödeme yaparsanız indirimli ödüyorsunuz. Böylece diğer cezalardaki gibi %25 indirimli ödeyebilirsiniz.
+                        <p className="mb-3 font-normal text-gray-700 ">Trafik ekiplerinin denetimleri sonucunda emniyet şeridi ihlali yapan sürücülere ceza kesme işlemi uygulanıyor. Aynı zamanda elektronik denetleme sistemleri ile şerit ihlallerini plaka üzerinden takip ederek trafik cezasına dönüştürülüyor. Emniyet şeridini uygunsuz kullanma cezası 2022 itibarıyla 1.823 TL tutarında. Ceza kesildikten itibaren 15 gün içinde ödeme yaparsanız indirimli ödüyorsunuz. Böylece diğer cezalardaki gibi %25 indirimli ödeyebilirsiniz.
 
                             Emniyet şeridi cezası ücreti	1.823 TL
                             15 gün içinde ödenirse	1367.25 TL

@@ -98,11 +98,11 @@ export default function Home() {
                     </TabPanel>
 
                 </Box>
-                <div class="mt-32 xl:mt-0"  >
+                <div class="pt-16 xl:mt-0"  >
                     <div className="text-center text-custom1 text-white font-bold text-3xl leading-relaxed	">
                         Programı kur <br /> <span className="font-light	">ve Bi Şöför sipariş et</span>
                     </div>
-                    <div className="flex py-4 justify-center">
+                    <div className="flex pb-16 pt-5 justify-center">
                         <button className="flex items-center border-2 rounded-xl mx-2	 border-white px-3.5 py-4 text-white"><FaGooglePlay className="text-2xl" /> <span className="pl-2 font-semibold xl:text-2xl">Google Play</span></button>
                         <button className="flex items-center border-2 rounded-xl mx-2	 border-white px-3.5 py-4 text-white"><BsApple className="text-2xl" /> <span className="pl-2 font-semibold xl:text-2xl">App Store</span></button>
                     </div>
