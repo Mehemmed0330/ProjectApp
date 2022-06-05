@@ -1,10 +1,11 @@
 import React from 'react'
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import Logo from "../assets/Logo.svg"
 import { useState } from "react"
 
 import { useSelector } from "react-redux"
 import { selectUser } from "../redux/userSlice"
+import { useNavigate } from "react-router-dom"
 
 
 import List from '@mui/material/List';
@@ -16,6 +17,8 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { AiOutlineClose } from "react-icons/ai";
 
 
+
+
 const options = [
     'Azerbaycan',
     'Türkiye',
@@ -23,21 +26,26 @@ const options = [
 ];
 
 export default function Header() {
+    const navigate = useNavigate()
     const link = [
         { name: "Ana Sayfa", to: "/" },
         { name: "Hakkımızda", to: "/about" },
         { name: "Hizmetlerimiz", to: "/services" },
         { name: "Ücretlendirme", to: "/cash" },
-        { name: "Bişöför ol", to: "/driver" },
+
+
+
+    ]
+
+    const links = [
         { name: "Kampaniyalar", to: "/campaign" },
         { name: "Blog", to: "/blog" },
         { name: "İletişim", to: "/contact" },
         { name: "FAQ", to: "/faq" },
 
-
     ]
     const afterLink = [
-        { name: "Giriş ol ve ya Kayıt ol", to: "/customer" },
+        { name: "Giriş yap ve ya Kayıt ol", to: "/customer" },
         // { name: "Login", to: "/login" },
     ]
 
@@ -60,12 +68,18 @@ export default function Header() {
     const [openMenu, setOpenMenu] = useState(false);
     const user = useSelector(selectUser)
 
+
+
+
     return (
         <div>
             <div className="xl:pr-10 bg-black">
                 <div className="xl:flex items-center xl:justify-between">
                     <div >
-                        <img src={Logo} alt="" className="w-48 " />
+                        <Link to="/">
+                            <img src={Logo} alt="" className="w-48 " />
+
+                        </Link>
                     </div>
                     <div onClick={() => setOpenMenu(!openMenu)} className="text-3xl text-yellow-300 absolute right-8 top-12 cursor-pointer xl:hidden">
                         {openMenu ? <AiOutlineClose /> : <AiOutlineMenu />}
@@ -73,6 +87,18 @@ export default function Header() {
                     <div class="w-2/5 xl:w-full mx-auto transition duration-150 ease-out">
                         <ul className={`sm:block xl:flex  xl:items-center xl:justify-between absolute xl:static bg-black xl:z-auto z-[1] left-0 w-full xl:w-auto transition duration-150 ease-in ${openMenu ? '' : 'top-[-1000px]'}`}>
                             {link.map((page, index) =>
+                                <NavLink onClick={() => setOpenMenu(false)} to={`${page.to}`}
+                                    style={({ isActive }) =>
+                                        isActive ? { backgroundColor: "rgb(253,224,71)", color: "black" } : undefined
+                                    } key={index} className="block text-yellow-300 xl:px-1 xl:py-4 xl:mx-1 font-semibold hover:bg-yellow-300 transition ease-in hover:text-black p-1 text-center">{page.name}</NavLink>
+                            )}
+                            {user ? null :
+                                <NavLink onClick={() => setOpenMenu(false)} to={"/driver"}
+                                    style={({ isActive }) =>
+                                        isActive ? { backgroundColor: "rgb(253,224,71)", color: "black" } : undefined
+                                    } className="block text-yellow-300 xl:px-1 xl:py-4 xl:mx-1 font-semibold hover:bg-yellow-300 transition ease-in hover:text-black p-1 text-center">Bişöför ol</NavLink>
+                            }
+                            {links.map((page, index) =>
                                 <NavLink onClick={() => setOpenMenu(false)} to={`${page.to}`}
                                     style={({ isActive }) =>
                                         isActive ? { backgroundColor: "rgb(253,224,71)", color: "black" } : undefined
@@ -103,9 +129,10 @@ export default function Header() {
                                     >
                                         <ListItemText
                                             secondary={options[selectedIndex]}
-                                            className="font-bold"
+                                            className="font-bold text-center"
                                             style={{
                                                 fontWeight: '700',
+                                                textAlign: 'center'
                                             }}
                                         />
                                     </ListItem>
@@ -132,12 +159,17 @@ export default function Header() {
                                     ))}
                                 </Menu>
                             </div>
-                            {user ? user.fullName : afterLink.map((page, index) =>
-                                <NavLink onClick={() => setOpenMenu(false)} to={`${page.to}`}
-                                    style={({ isActive }) =>
-                                        isActive ? { backgroundColor: "rgb(253,224,71)", color: "black" } : undefined
-                                    } key={index} className="block text-yellow-300 xl:px-1 xl:py-4 xl:mx-1 font-semibold hover:bg-yellow-300 transition ease-in hover:text-black p-1 text-center">{page.name}</NavLink>
-                            )}
+                            {user ? <NavLink onClick={() => setOpenMenu(false)} to={`/dashboard`}
+                                style={({ isActive }) =>
+                                    isActive ? { backgroundColor: "rgb(253,224,71)", color: "black" } : undefined
+                                } className="block text-yellow-300 xl:px-3 xl:py-4 xl:mx-1 font-semibold hover:bg-yellow-300 transition ease-in hover:text-black p-1 text-center">Profil</NavLink> :
+                                afterLink.map((page, index) =>
+
+                                    <NavLink onClick={() => setOpenMenu(false)} to={`${page.to}`}
+                                        style={({ isActive }) =>
+                                            isActive ? { backgroundColor: "rgb(253,224,71)", color: "black" } : undefined
+                                        } key={index} className="block text-yellow-300 xl:px-1 xl:py-4 xl:mx-1 font-semibold hover:bg-yellow-300 transition ease-in hover:text-black p-1 text-center">{page.name}</NavLink>
+                                )}
                         </ul>
                     </div>
 

@@ -27,13 +27,16 @@ export default function Login() {
             axios.post('http://144.91.97.115:9090/api/v1/customer/Account/Authenticate', data)
                 .then(res => {
                     localStorage.setItem('token', res.data.result.jwtToken);
-                    localStorage.setItem('fullName', res.data.result.fullname);
-                    console.log(res.data.result)
-                    const fullName = res.data.result.fullname
+                    localStorage.setItem('fullName', JSON.stringify(res.data.result.fullname));
+                    console.log(res)
+                    const fullName = window.localStorage.getItem('fullName')
+                    const token = window.localStorage.getItem('token')
                     console.log(fullName)
                     dispatch(login({
-                        fullName: fullName
+                        fullName: JSON.parse(fullName),
+                        token: (token)
                     }));
+                    navigate('/')
 
                 })
                 .catch(err => {
@@ -54,6 +57,17 @@ export default function Login() {
             axios.post('http://144.91.97.115:9090/api/v1/driver/Account/Authenticate', data)
                 .then(res => {
                     localStorage.setItem('token', res.data.result.jwtToken);
+                    localStorage.setItem('fullName', JSON.stringify(res.data.result.fullname));
+                    console.log(res)
+                    const fullName = window.localStorage.getItem('fullName')
+                    const token = window.localStorage.getItem('token')
+                    console.log(fullName)
+                    dispatch(login({
+                        fullName: JSON.parse(fullName),
+                        token: (token)
+                    }));
+                    // navigate('/dashboard')
+
                 })
                 .catch(err => {
                     Swal.fire({
@@ -65,7 +79,7 @@ export default function Login() {
                 })
                 .finally(() => setLoadingSubmit(false))
         }
-        navigate("/dashboard")
+        // navigate("/dashboard")
     }
 
 
@@ -75,7 +89,7 @@ export default function Login() {
             <form onSubmit={handleSubmit} class="bg-white shadow-md rounded px-4 pt-6 pb-8 mx-auto md:w-1/2 w-4/5 mt-20 mb-20">
                 <select value={type} onChange={(e) => setType(e.target.value)}>
                     <option value="0">Bisofor</option>
-                    <option value="1">Musteri</option>
+                    <option value="1">Müşteri</option>
                 </select>
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
@@ -88,14 +102,14 @@ export default function Login() {
                         Kod
                     </label>
                     <input value={pass} onChange={(e) => setPass(e.target.value)} class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="******************" />
-                    <p class="text-red-500 text-xs italic">Please choose a password.</p>
+                    <p class="text-red-500 text-xs italic">Lütfen bir şifre seçin.</p>
                 </div>
                 <div class="flex items-center justify-between ">
                     <button disabled={loadingSubmit} class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-                        {loadingSubmit ? 'bekleyin...' : 'Sign In'}
+                        {loadingSubmit ? 'bekleyin...' : 'Kayıt ol'}
                     </button>
                     <Link to="/forgotPassword" class=" align-baseline font-bold text-sm text-blue-500 hover:text-blue-800 md:mt-0 " href="#">
-                        Forgot Password?
+                        Parolanızı mı unuttunuz?
                     </Link>
 
                 </div>

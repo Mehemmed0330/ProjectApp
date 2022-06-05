@@ -5,12 +5,13 @@ module.exports = {
     theme: {
         extend: {
             backgroundImage: {
-                "homeImage": "linear-gradient(to right bottom, rgba(3, 18, 16, 0.7), rgba(3, 18, 16, 0.7)), url('./assets/Country.jpg')",
-                "sliderFirst": "linear-gradient(to right bottom, rgba(3, 18, 16, 0.6), rgba(3, 18, 16, 0.6)), url('./assets/SliderImageFirst.jpg')",
+                "homeImage": "linear-gradient(to right bottom, rgba(3, 18, 16, 0.7), rgba(3, 18, 16, 0.7)), url('./assets/Country.png')",
+                "sliderFirst": "linear-gradient(to right bottom, rgba(3, 18, 16, 0.6), rgba(3, 18, 16, 0.6)), url('./assets/SliderImageFirst.png')",
                 "sliderSecond": "linear-gradient(to right bottom, rgba(3, 18, 16, 0.6), rgba(3, 18, 16, 0.6)), url('./assets/SliderImageSecond.jpg')",
                 // "sliderThred": "linear-gradient(to right bottom, rgba(3, 18, 16, 0.6), rgba(3, 18, 16, 0.6)), url('./assets/SliderImageThrid.jpg')",
                 "sliderFourth": "linear-gradient(to right bottom, rgba(3, 18, 16, 0.6), rgba(3, 18, 16, 0.6)), url('./assets/SliderImageFourth.jpg')",
-                "companyImageFirst": "url('./assets/CompanyPicture.jpg')"
+                "companyImageFirst": "url('./assets/CompanyPicture.jpg')",
+                "ServicesA": "url('./assets/ServicesA.png')",
 
             },
             fontFamily: {

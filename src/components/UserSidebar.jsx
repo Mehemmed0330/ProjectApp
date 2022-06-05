@@ -8,6 +8,8 @@ import ActiveOrders from '../dashboardPages/ActiveOrders';
 import OrderHistory from '../dashboardPages/OrderHistory';
 import SavedAddresses from '../dashboardPages/SavedAddresses';
 import ChangePassword from '../dashboardPages/ChangePassword';
+import { useNavigate } from "react-router-dom"
+
 
 
 // import Icon from '@material-tailwind/react/Icon';
@@ -24,7 +26,18 @@ export default function Sidebar() {
         { name: "Order history", to: 2 },
         { name: "Saved addresses", to: 3 },
         { name: "Change password", to: 4 },
+
+
     ]
+    const navigate = useNavigate()
+
+    const logout = () => {
+        localStorage.clear(`${user.token}`)
+        localStorage.clear(`${user.fullName}`)
+        navigate('/')
+        window.location.reload()
+
+    }
     return (
         <div>
             <UserNavbar
@@ -41,7 +54,7 @@ export default function Sidebar() {
                         rel="noreferrer"
                         className="mt-2 text-center w-full inline-block"
                     >
-                        <h1 color="gray"></h1>
+                        <h1 color="gray">{user.firstName} {user.lastName}</h1>
                     </a>
                     <div className="flex flex-col">
                         <hr className="my-4 min-w-full" />
@@ -57,6 +70,10 @@ export default function Sidebar() {
                                     {page.name}
                                 </li>
                             )}
+                            <button onClick={logout} className="flex items-center justify-center gap-4 text-sm text-gray-700 font-semibold px-4 py-3  rounded-lg mb-4 hover:bg-yellow-300 cursor-pointer">
+                                Logout
+                            </button>
+
 
 
                         </ul>

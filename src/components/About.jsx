@@ -86,7 +86,7 @@ export default function AutoPlay() {
             <div className="bg-yellow-300 xl:flex xl:flex-col xl:justify-center" style={{ minHeight: 'calc(100vh - 36px)' }} >
                 <Slider {...settings} className="mb-20">
                     <div className="" >
-                        <div className="bg-sliderFirst mt-5 bg-cover bg-center bg-no-repeat mx-2 xl:h-60vh h-96	 xl:p-0 p-2" >
+                        <div className="bg-homeImage mt-5 bg-cover bg-center bg-no-repeat mx-2 xl:h-60vh h-96	 xl:p-0 p-2" >
                             <div className="xl:flex xl:flex-col xl:justify-center xl:h-96 md:flex md:flex-col md:justify-center md:h-96 text-white leading-10	tracking-wide">
                                 <p className="text-center xl:text-5xl text-2xl font-bold mb-5">Bi Şoför Nedir?</p>
                                 <p className="text-center text-xl mb-5">Bi Şoför kendi aracınıza özel şoför hizmeti sunan akıllı bir uygulamadır.</p>
@@ -96,7 +96,7 @@ export default function AutoPlay() {
                             </div>
                         </div>
                     </div>
-                    <div className="">
+                    {/* <div className="">
                         <div className="bg-sliderSecond mt-5 bg-cover bg-center bg-no-repeat mx-2  xl:h-60vh h-96	  xl:p-0 p-2 " >
                             <div className="xl:flex xl:flex-col xl:justify-center xl:h-96 md:flex md:flex-col md:justify-center md:h-96 text-white leading-10	tracking-wide">
                                 <p className="text-center xl:text-5xl text-2xl font-bold mb-5">Bi Şoför Nedir?</p>
@@ -128,7 +128,7 @@ export default function AutoPlay() {
                                 </p>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
 
 
                     {/* <div className="px-10" index={6}>
