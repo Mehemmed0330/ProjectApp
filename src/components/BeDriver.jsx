@@ -131,7 +131,7 @@ export default function BeDriver() {
                     </div>
                 </div>
                 <div className="text-center bg-black text-yellow-300 px-24 py-2 font-bold text-lg">
-                    Sürücü ol
+                    Bi Şoför ol
                 </div>
             </div>
             <div className="md:px-32 px-2 py-10 bg-yellow-300">

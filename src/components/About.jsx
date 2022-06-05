@@ -139,7 +139,7 @@ export default function AutoPlay() {
                 </Slider>
 
                 <div className="container text-center pt-5">
-                    <span className="text-[24px] font-medium">Haydi! Aracı kim kullanacak diye düşünmeyin! Bi Şoför uygulamasını indirerek hayatınızı kolaylaştırın!</span>
+                    <span className="text-[24px] font-medium">Haydi! Aracımı kim kullanacak diye düşünme! Bi Şoför uygulamasını indir.Hayatını kolaylaştır!</span>
                 </div>
 
                 <div className="flex py-4 justify-center pt-5 pb-16">

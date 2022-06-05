@@ -57,8 +57,8 @@ export default function Home() {
                 <Box style={{ backgroundColor: "rgba(3, 18, 16, 0.4)", minHeight: "65vh" }} class="xl:w-5/12 md:w-3/4 w-full">
                     <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-                            <Tab label="Yeni sifariş" {...a11yProps(0)} />
-                            <Tab label="Sifarişim" {...a11yProps(1)} />
+                            <Tab label="Yeni sipariş" {...a11yProps(0)} />
+                            <Tab label="Siparişim" {...a11yProps(1)} />
                         </Tabs>
                     </Box>
                     <TabPanel value={value} index={0} >
@@ -100,7 +100,7 @@ export default function Home() {
                 </Box>
                 <div class="pt-16 xl:mt-0"  >
                     <div className="text-center text-custom1 text-white font-bold text-3xl leading-relaxed	">
-                        Programı kur <br /> <span className="font-light	">ve Bi Şöför sipariş et</span>
+                        Programı kur <br /> <span className="font-light	">ve Bi Şöför çağır</span>
                     </div>
                     <div className="flex pb-16 pt-5 justify-center">
                         <button className="flex items-center border-2 rounded-xl mx-2	 border-white px-3.5 py-4 text-white"><FaGooglePlay className="text-2xl" /> <span className="pl-2 font-semibold xl:text-2xl">Google Play</span></button>
