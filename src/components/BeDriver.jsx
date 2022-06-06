@@ -102,7 +102,7 @@ export default function BeDriver() {
             <div className="md:px-32 px-2 bg-yellow-300 ">
                 <div className='mb-10 bg-yellow-300'>
                     <div className="text-center py-5">
-                        <span className="text-2xl font-medium">Neden Bizimle Çalışmalısınız</span>
+                        <span className="text-2xl font-medium">Neden Bizimle Çalışmalısınız?</span>
                         {/* <p className="text-base ">Lorem ipsum dolor sit amet consectetur adipisicing.</p> */}
                     </div>
                     {/* <div className="flex justify-between mb-5">
@@ -125,9 +125,9 @@ export default function BeDriver() {
                         </div>
                     </div> */}
                     <div className='w-4/5 mx-auto'>
-                        <p className="tracking-normal text-center ">Bi Şoför ailesi olarak, deneyimli, yol bilgisine sahip, prezantabl, iletişimi güçlü değerli sürücü arkadaşlarımızı bünyemizde görmekten mutluluk duyarız. Uygulamamız, şöförlerimize ister tam zamanlı ister yarı zamanlı çalışma seçeneği ile esnek çalışma saatleri sunmaktadır. Sistem tarafından müşterilerimizin, Bi Şoför talebi işlemleri tamamlandıktan sonra, belirledikleri konuma en yakın Bi Şoför yönlendirilir. Şöförlerimiz, müşterilerimizi  gideceği konuma bıraktıktan sonra görevli Bi Şoför, servis araçlarımız ile belirlenen toplama alanlarından alınarak evlerine bırakılır. Mesai saatlerine göre Bi Şoför olarak çalışanımızın sigortası yapılır.
+                        <p className="tracking-normal text-center ">Bi Şoför ailesi olarak, deneyimli, yol bilgisine sahip, prezantabl, şoför arkadaşlarımızı bünyemizde görmekten mutluluk duyarız. Uygulamamız, şoförlerimize ister tam zamanlı ister yarı zamanlı çalışma seçenekleri ile esnek çalışma saatleri sunmaktadır. Sistem tarafından müşterilerimizin, Bi Şoför talebi işlemleri tamamlandıktan sonra, belirledikleri konuma en yakın Bi Şoför yönlendirilir. Şöförlerimiz, müşterilerimizi  gideceği konuma bıraktıktan sonra görevli Bi Şoför, servis araçlarımız ile belirlenen toplama alanlarından alınarak evlerine bırakılır. Mesai saatlerine göre Bi Şoför olarak çalışanımızın sigortası yapılır.
                             Siz de  Bi Şoför olarak ailemize katılmak isterseniz, uygulamadaki başvuru formunu eksiksiz doldurarak başvurunuzu yapabilirsiniz. Başvurunuz tarafımızdan değerlendirilerek en kısa sürede size dönüş yapılacaktır.
-                            Tüm şoförlerimizi ailemizin bir üyesi olarak görmekten ve birlikte büyümekten keyif alırız.</p>
+                            Tüm Bi Şoförlerimizi ailemizin birer üyesi olarak görmekten ve birlikte büyümekten keyif alırız.</p>
                     </div>
                 </div>
                 <div className="text-center bg-black text-yellow-300 px-24 py-2 font-bold text-lg">
@@ -178,10 +178,19 @@ export default function BeDriver() {
                     </div>
 
                     <div className="" >
+                        <div className="">
+                            <div className="relative z-0 w-full mb-6 group">
+                                <label htmlFor="" className="block font-semibold	">Profil Resmi</label>
+                                <div className="file-input">
+                                    <FileBase64
+                                        multiple={false}
+                                        onDone={({ base64 }) => setPhoto(base64)} />
+                                </div>
+                            </div>
+                        </div>
                         <div className="relative z-0 w-full mb-6 group">
-                            <label htmlFor="" className="block">Kimlik</label>
+                            <label htmlFor="" className="block font-semibold	">Kimlik</label>
                             <div className="file-input">
-
                                 <FileBase64
                                     type="file"
                                     multiple={false}
@@ -193,7 +202,7 @@ export default function BeDriver() {
 
                     <div className="">
                         <div className="relative z-0 w-full mb-6 group">
-                            <label htmlFor="" className="block">Narkoloji</label>
+                            <label htmlFor="" className="block font-semibold	">Sabıka Kaydı</label>
                             <div className="file-input">
                                 <FileBase64
                                     multiple={false}
@@ -202,9 +211,11 @@ export default function BeDriver() {
                         </div>
                     </div>
 
+
+
                     <div className="">
                         <div className="relative z-0 w-full mb-6 group">
-                            <label htmlFor="" className="block">Profil Resmi</label>
+                            <label htmlFor="" className="block font-semibold	">İkametgah(ayrıca olmalı)</label>
                             <div className="file-input">
                                 <FileBase64
                                     multiple={false}

@@ -81,7 +81,7 @@ export default function Faq() {
                 </AccordionSummary>
                 <AccordionDetails className="bg-black">
                     <Typography class="text-yellow-300 font-medium	">
-                        Bi Şoför olmak için, uygulamada “Bi Şoför Nasıl Olurum” konu başlığındaki Başvuru Formu’nu (buradaki Başvuru Formu mavi olup üzeri tıklandığında direkt forma gidebilir) doldurarak veya info@bisofor.com adresine başvurunuzu ve CV’nizi göndererek yapabilirsiniz
+                        Bi Şoför olmak için, uygulamada “Bi Şoför ol” konu başlığındaki Başvuru Formu’nu doldurarak veya info@bisofor.com adresine başvurunuzu ve CV’nizi göndererek yapabilirsiniz
                     </Typography>
                 </AccordionDetails>
             </Accordion>
@@ -101,7 +101,7 @@ export default function Faq() {
                 </AccordionSummary>
                 <AccordionDetails className="bg-black">
                     <Typography class="text-yellow-300 font-medium	">
-                        Ödemeler banka ya da kredi kartı ile yapılır. Banka/kredi kartı bilgileriniz Master Card ödeme alt yapısı Masterpass tarafından korunur. Talebinizi onayladığınızda yolculuk tutarı otomatik olarak kartınızdan çekilir. Uzayan yolculuklarda ekstra olarak hesaplanır ve ikinci bir onay alınarak uzayan yolculuk başladığında çekilir.                    </Typography>
+                        Ödemeler banka ya da kredi kartı ile yapılır. Banka/kredi kartı bilgileriniz Master Card ödeme alt yapısı Masterpass tarafından korunur. Talebinizi onayladığınızda yolculuk tutarı otomatik olarak kartınızdan çekilir. Uzayan yolculuklarda ekstra olarak hesaplanır ve ikinci bir onay alınarak uzayan yolculuk başladığında hesablanan tutar çekilir.                    </Typography>
                 </AccordionDetails>
             </Accordion>
             <Accordion expanded={expanded === 'panel6'} onChange={handleChange('panel6')} style={{ border: "1px solid black", borderTop: "0px" }} >

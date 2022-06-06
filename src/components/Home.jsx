@@ -54,7 +54,7 @@ export default function Home() {
     return (
         <div>
             <div className="xl:flex  xl:justify-around xl:items-center bg-homeImage md:flex bg-cover bg-center bg-no-repeat md:h-screen" style={{ minHeight: 'calc(100vh - 136px)' }}>
-                <Box style={{ backgroundColor: "rgba(3, 18, 16, 0.4)", minHeight: "65vh" }} class="xl:w-5/12 md:w-3/4 w-full">
+                <Box style={{ backgroundColor: "rgba(3, 18, 16, 0.4)", minHeight: "65vh" }} class="xl:w-6/12 md:w-3/4 w-full">
                     <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
                             <Tab label="Yeni sipariş" {...a11yProps(0)} />
@@ -72,14 +72,15 @@ export default function Home() {
                                     <p class="text-red-500 text-xs italic">Lütfen bu alanı doldurun.</p>
                                 </div>
                                 <div class="flex items-center justify-between  py-2 xl:w-5/12 w-11/12 mx-auto ">
-                                    <input class="text-sm appearance-none bg-yellow-300 border-none w-1/2 text-black mr-1 py-2 px-2 leading-tight focus:outline-none placeholder:text-black " type="number" placeholder="Kod ekle" aria-label="Adınız" />
                                     <button class="flex-shrink-0 bg-yellow-300 hover:bg-yellow-400 border-yellow-400 hover:border-yellow-400 text-sm border-4 text-black py-1 px-2 rounded" type="button">
                                         Kodu gönder
                                     </button>
+                                    <input class="text-sm appearance-none bg-yellow-300 border-none w-1/2 text-black mr-1 py-2 px-2 leading-tight focus:outline-none placeholder:text-black " type="number" placeholder="Onay kodu ekle" aria-label="" />
+
                                 </div>
                             </div>
                             <div>
-                                <label for="small-input" class="block mb-2 text-sm font-medium text-yellow-300 dark:text-gray-300">Nerden?</label>
+                                <label for="small-input" class="block mb-2 text-sm font-medium text-yellow-300 dark:text-gray-300">Nereden?</label>
                                 <input type="text" id="small-input" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-xl bg-yellow-300 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
                             </div>
                             <div class="mt-5">
@@ -87,7 +88,7 @@ export default function Home() {
                                 <input type="text" id="small-input" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-xl bg-yellow-300 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
                             </div>
 
-                            <button type="submit" className="my-5 text-black bg-yellow-300 hover:bg-yellow-200 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Göndermek</button>
+                            <button type="submit" className="my-5 text-black bg-yellow-300 hover:bg-yellow-200 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm w-full sm:w-auto px-5 py-2.5 text-center">Bi Şoför Gelsin</button>
 
                         </form>
                     </TabPanel>

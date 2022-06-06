@@ -89,10 +89,9 @@ export default function AutoPlay() {
                         <div className="bg-homeImage mt-5 bg-cover bg-center bg-no-repeat mx-2 xl:h-60vh h-96	 xl:p-0 p-2" >
                             <div className="xl:flex xl:flex-col xl:justify-center xl:h-96 flex flex-col justify-center h-96 text-white leading-10	tracking-wide">
                                 <p className="text-center xl:text-5xl text-2xl font-bold mb-5">Bi Şoför Nedir?</p>
-                                <p className="text-center text-xl mb-5">Bi Şoför kendi aracınıza özel şoför hizmeti sunan akıllı bir uygulamadır.</p>
+                                <p className="text-center text-xl mb-5">Bi Şoför; kendi aracınızla yapacağınız yolculuklarda özel şoför hizmeti sunan akıllı bir uygulamadır.</p>
                                 <p className="text-center text-base xl:px-96 md:px-0">
-                                    Bi Şoför uygulaması, araç sahibi kişilere saatlik, günlük özel şoför hizmeti sunar.Uygulamayı telefonunuza indirerek 7/24 deneyimli şoförlerimizi, olduğunuz yere ya da belirlediğiniz bir konuma hemen veya istediğiniz bir saat için saatlik veya günlük çağırabilirsiniz.
-                                </p>
+                                    Bi Şoför uygulaması, araç sahibi kişilere, saatlik, günlük özel şoför hizmeti sunar. Uygulamayı telefonunuza indirerek 7/24 deneyimli şoförlerimizi, olduğunuz yere ya da belirlediğiniz bir konuma hemen veya istediğiniz bir saat için saatlik veya günlük çağırabilirsiniz.                                </p>
                             </div>
                         </div>
                     </div>

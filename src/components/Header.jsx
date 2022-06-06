@@ -38,10 +38,10 @@ export default function Header() {
     ]
 
     const links = [
-        { name: "Kampaniyalar", to: "/campaign" },
+        { name: "Kampanyalar", to: "/campaign" },
         { name: "Blog", to: "/blog" },
         { name: "İletişim", to: "/contact" },
-        { name: "FAQ", to: "/faq" },
+        { name: "S.S.S", to: "/faq" },
 
     ]
     const afterLink = [
