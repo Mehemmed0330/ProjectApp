@@ -52,7 +52,7 @@ export default function Faq() {
     };
 
     return (
-        <div class="p-4">
+        <div class="p-4 bg-yellow-300">
             <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} style={{ border: "1px solid black" }} >
                 <AccordionSummary aria-controls="panel1d-content" id="panel1d-header" style={{ backgroundColor: "rgb(253,224,71)" }} >
                     <Typography class="text-black font-bold ">Bi Şoför Nedir?</Typography>

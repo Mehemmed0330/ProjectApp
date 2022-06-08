@@ -68,10 +68,10 @@ export default function AutoPlay() {
         ]
     };
     return (
-        <div className="py-4 px-2">
+        <div className="py-4 px-2 bg-yellow-300">
             <Slider {...settings}>
                 <div>
-                    <div className="bg-yellow-300 h-80 md:mx-5  xl:w-96  xl:flex xl:items-center justify-between xl:px-2 px-5 py-4 text-center  " >
+                    <div className="bg-black text-yellow-300 h-80 md:mx-5  xl:w-96  xl:flex xl:items-center justify-between xl:px-2 px-5 py-4 text-center  " >
                         <div className="w-24 h-24 rounded-full object-cover mx-auto">
                             <CgProfile className="rounded-full h-full w-full	" />
                         </div>
@@ -87,7 +87,7 @@ export default function AutoPlay() {
                     </div>
                 </div>
                 <div>
-                    <div className="bg-yellow-300 h-80 md:mx-5  xl:w-96  xl:flex xl:items-center justify-between xl:px-2 px-5 py-4 text-center  " >
+                    <div className="bg-black text-yellow-300 h-80 md:mx-5  xl:w-96  xl:flex xl:items-center justify-between xl:px-2 px-5 py-4 text-center  " >
                         <div className="w-24  h-24 rounded-full object-cover mx-auto">
                             <CgProfile className="rounded-full h-full w-full	" />
                         </div>
@@ -102,7 +102,7 @@ export default function AutoPlay() {
 
                     </div>
                 </div><div>
-                    <div className="bg-yellow-300 h-80 md:mx-5  xl:w-96  xl:flex xl:items-center justify-between xl:px-2 px-5 py-4 text-center  " >
+                    <div className="bg-black text-yellow-300 h-80 md:mx-5  xl:w-96  xl:flex xl:items-center justify-between xl:px-2 px-5 py-4 text-center  " >
                         <div className="w-24  h-24 rounded-full object-cover mx-auto">
                             <CgProfile className="rounded-full h-full w-full	" />
                         </div>
@@ -118,7 +118,7 @@ export default function AutoPlay() {
                     </div>
                 </div>
                 <div>
-                    <div className="bg-yellow-300 h-80 md:mx-5  xl:w-96  xl:flex xl:items-center justify-between xl:px-2 px-5 py-4 text-center  " >
+                    <div className="bg-black text-yellow-300 h-80 md:mx-5  xl:w-96  xl:flex xl:items-center justify-between xl:px-2 px-5 py-4 text-center  " >
                         <div className="w-24  h-24 rounded-full object-cover mx-auto">
                             <CgProfile className="rounded-full h-full w-full	" />
                         </div>
@@ -135,7 +135,7 @@ export default function AutoPlay() {
                 </div>
 
                 <div>
-                    <div className="bg-yellow-300 h-80 md:mx-5  xl:w-96  xl:flex xl:items-center justify-between xl:px-2 px-5 py-4 text-center  " >
+                    <div className="bg-black text-yellow-300 h-80 md:mx-5  xl:w-96  xl:flex xl:items-center justify-between xl:px-2 px-5 py-4 text-center  " >
                         <div className="w-24  h-24 rounded-full object-cover mx-auto">
                             <CgProfile className="rounded-full h-full w-full	" />
                         </div>
@@ -152,7 +152,7 @@ export default function AutoPlay() {
                 </div>
 
                 <div>
-                    <div className="bg-yellow-300 h-80 md:mx-5  xl:w-96  xl:flex xl:items-center justify-between xl:px-2 px-5 py-4 text-center  " >
+                    <div className="bg-black text-yellow-300 h-80 md:mx-5  xl:w-96  xl:flex xl:items-center justify-between xl:px-2 px-5 py-4 text-center  " >
                         <div className="w-24  h-24 rounded-full object-cover mx-auto">
                             <CgProfile className="rounded-full h-full w-full	" />
                         </div>
@@ -169,7 +169,7 @@ export default function AutoPlay() {
                 </div>
 
                 <div>
-                    <div className="bg-yellow-300 h-80 md:mx-5  xl:w-96  xl:flex xl:items-center justify-between xl:px-2 px-5 py-4 text-center  " >
+                    <div className="bg-black text-yellow-300 h-80 md:mx-5  xl:w-96  xl:flex xl:items-center justify-between xl:px-2 px-5 py-4 text-center  " >
                         <div className="w-24  h-24 rounded-full object-cover mx-auto">
                             <CgProfile className="rounded-full h-full w-full	" />
                         </div>
