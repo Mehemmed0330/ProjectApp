@@ -57,18 +57,18 @@ export default function Home() {
                 <Box style={{ backgroundColor: "rgba(3, 18, 16, 0.4)", minHeight: "65vh" }} class="xl:w-6/12 md:w-3/4 w-full">
                     <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-                            <Tab label="Yeni sipariş" {...a11yProps(0)} />
-                            <Tab label="Siparişim" {...a11yProps(1)} />
+                            <Tab label="Yenİ sİparİş" {...a11yProps(0)} />
+                            <Tab label="Sİparİşlerİm" {...a11yProps(1)} />
                         </Tabs>
                     </Box>
                     <TabPanel value={value} index={0} >
                         <form class="w-full min-w-sm ">
                             <div class="xl:flex xl:justify-between  -mx-3 mb-6">
                                 <div class="w-full xl:w-7/12 px-3 mb-6 xl:mb-0">
-                                    <label class="block uppercase tracking-wide text-yellow-300 text-xs font-bold mb-2 " for="grid-first-name">
+                                    <label class="block uppercase tracking-wide text-yellow-300 text-xs font-bold mb-2 " for="grid-first-name" >
                                         Numara
                                     </label>
-                                    <input class="placeholder:text-black appearance-none block w-full bg-yellow-300 text-black border  rounded py-2 px-3 mb-3 leading-tight focus:outline-none focus:bg-yellow-300" id="grid-first-name" type="number" placeholder="+90" />
+                                    <input class="placeholder:text-black appearance-none block w-full bg-yellow-300 text-black border  rounded py-2 px-3 mb-3 leading-tight focus:outline-none focus:bg-yellow-300" id="grid-first-name" type="text" defaultValue="+90" />
                                     <p class="text-red-500 text-xs italic">Lütfen bu alanı doldurun.</p>
                                 </div>
                                 <div class="flex items-center justify-between  py-2 xl:w-5/12 w-11/12 mx-auto ">
@@ -88,20 +88,20 @@ export default function Home() {
                                 <input type="text" id="small-input" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-xl bg-yellow-300 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
                             </div>
 
-                            <button type="submit" className="my-5 text-black bg-yellow-300 hover:bg-yellow-200 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm w-full sm:w-auto px-5 py-2.5 text-center">Bi Şoför Gelsin</button>
+                            <button type="submit" className="my-5 text-black font-semibold	 bg-yellow-300 hover:bg-yellow-200 focus:ring-4 focus:outline-none  font-medium rounded-xl text-sm w-full sm:w-auto px-5 py-2.5 text-center">Bi Şoför Gelsin</button>
 
                         </form>
                     </TabPanel>
                     <TabPanel value={value} index={1}>
                         <div className="text-yellow-300">
-                            Sifariş yok
+                            Sipariş yok
                         </div>
                     </TabPanel>
 
                 </Box>
                 <div class="pt-16 xl:mt-0"  >
                     <div className="text-center text-custom1 text-white font-bold text-3xl leading-relaxed	">
-                        Programı kur <br /> <span className="font-light	">ve Bi Şöför çağır</span>
+                        Uygulamayı indir <br /> <span className="font-light	">ve Bi Şoför çağır</span>
                     </div>
                     <div className="flex pb-16 pt-5 justify-center">
                         <button className="flex items-center border-2 rounded-xl mx-2	 border-white px-3.5 py-4 text-white"><FaGooglePlay className="text-2xl" /> <span className="pl-2 font-semibold xl:text-2xl">Google Play</span></button>

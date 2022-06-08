@@ -16,6 +16,8 @@ import Login from "./components/Login"
 import Dashboard from "./components/Dashboard"
 import ForgotPassword from "./components/ForgotPassword"
 import ResetPassword from "./components/ResetPassword"
+import EditAccount from "./components/EditAccount"
+import EditPhone from "./components/EditPhone"
 
 
 
@@ -40,8 +42,11 @@ export default function App() {
         <Route path="/forgotPassword" element={<ForgotPassword />} />
         <Route path="/resetPassword" element={<ResetPassword />} />
         {/* <Route path="/accountInfo" element={<AccountInfo />} /> */}
-        <Route path="/dashboard" element={<Dashboard />} >
-        </Route>
+        <Route path="/editAccount" element={<EditAccount />} />
+        <Route path="/editPhone" element={<EditPhone />} />
+
+
+        <Route path="/dashboard" element={<Dashboard />} />
         <Route />
       </Routes>
       <Footer />

@@ -41,11 +41,11 @@ export default function Header() {
         { name: "Kampanyalar", to: "/campaign" },
         { name: "Blog", to: "/blog" },
         { name: "İletişim", to: "/contact" },
-        { name: "S.S.S", to: "/faq" },
+        { name: "S.S.S.", to: "/faq" },
 
     ]
     const afterLink = [
-        { name: "Giriş yap ve ya Kayıt ol", to: "/customer" },
+        { name: "Giriş yap veya Kayıt ol", to: "/customer" },
         // { name: "Login", to: "/login" },
     ]
 
@@ -96,7 +96,7 @@ export default function Header() {
                                 <NavLink onClick={() => setOpenMenu(false)} to={"/driver"}
                                     style={({ isActive }) =>
                                         isActive ? { backgroundColor: "rgb(253,224,71)", color: "black" } : undefined
-                                    } className="block text-yellow-300 xl:px-1 xl:py-4 xl:mx-1 font-semibold hover:bg-yellow-300 transition ease-in hover:text-black p-1 text-center">Bişöför ol</NavLink>
+                                    } className="block text-yellow-300 xl:px-1 xl:py-4 xl:mx-1 font-semibold hover:bg-yellow-300 transition ease-in hover:text-black p-1 text-center">Bi Şoför Ol</NavLink>
                             }
                             {links.map((page, index) =>
                                 <NavLink onClick={() => setOpenMenu(false)} to={`${page.to}`}

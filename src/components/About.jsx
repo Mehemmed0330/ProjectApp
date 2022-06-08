@@ -86,11 +86,11 @@ export default function AutoPlay() {
             <div className="bg-yellow-300 xl:flex xl:flex-col xl:justify-center" style={{ minHeight: 'calc(100vh - 36px)' }} >
                 <Slider {...settings} className="mb-10">
                     <div className="" >
-                        <div className="bg-homeImage mt-5 bg-cover bg-center bg-no-repeat mx-2 xl:h-60vh h-96	 xl:p-0 p-2" >
+                        <div className="bg-homeImage mt-5 bg-cover bg-center bg-no-repeat mx-2 xl:h-60vh h-[26rem]	 xl:p-0 p-2" >
                             <div className="xl:flex xl:flex-col xl:justify-center xl:h-96 flex flex-col justify-center h-96 text-white leading-10	tracking-wide">
                                 <p className="text-center xl:text-5xl text-2xl font-bold mb-5">Bi Şoför Nedir?</p>
-                                <p className="text-center text-xl mb-5">Bi Şoför; kendi aracınızla yapacağınız yolculuklarda özel şoför hizmeti sunan akıllı bir uygulamadır.</p>
-                                <p className="text-center text-base xl:px-96 md:px-0">
+                                <p className="text-center text-xl mb-3">Bi Şoför; kendi aracınızla yapacağınız yolculuklarda özel şoför hizmeti sunan akıllı bir uygulamadır.</p>
+                                <p className="text-center text-base xl:px-96 md:px-0 md:pb-5">
                                     Bi Şoför uygulaması, araç sahibi kişilere, saatlik, günlük özel şoför hizmeti sunar. Uygulamayı telefonunuza indirerek 7/24 deneyimli şoförlerimizi, olduğunuz yere ya da belirlediğiniz bir konuma hemen veya istediğiniz bir saat için saatlik veya günlük çağırabilirsiniz.                                </p>
                             </div>
                         </div>
@@ -138,7 +138,7 @@ export default function AutoPlay() {
                 </Slider>
 
                 <div className="container text-center pt-5">
-                    <span className="text-[24px] font-medium">Haydi! Aracımı kim kullanacak diye düşünme! Bi Şoför uygulamasını indir.Hayatını kolaylaştır!</span>
+                    <span className="text-[24px] font-medium">Haydi! Aracımı kim kullanacak diye düşünme! Bi Şoför uygulamasını indir. Hayatını kolaylaştır!</span>
                 </div>
 
                 <div className="flex py-4 justify-center pt-5 pb-16">

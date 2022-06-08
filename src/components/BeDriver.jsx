@@ -210,12 +210,9 @@ export default function BeDriver() {
                             </div>
                         </div>
                     </div>
-
-
-
                     <div className="">
                         <div className="relative z-0 w-full mb-6 group">
-                            <label htmlFor="" className="block font-semibold	">İkametgah(ayrıca olmalı)</label>
+                            <label htmlFor="" className="block font-semibold	">İkametgah</label>
                             <div className="file-input">
                                 <FileBase64
                                     multiple={false}
@@ -235,7 +232,7 @@ export default function BeDriver() {
 
 
                     <button disabled={loadingSubmit} type="submit" className="text-yellow-300 bg-black  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                        {loadingSubmit ? 'Bekleyin...' : 'Submit'}
+                        {loadingSubmit ? 'Bekleyin...' : 'Gönder'}
                     </button>
                 </form>
             </div>

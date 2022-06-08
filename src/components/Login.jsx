@@ -17,6 +17,7 @@ export default function Login() {
         e.preventDefault()
 
         setLoadingSubmit(true);
+        // const type = dispatch(login({ kind : element === '1'}))
 
         if (type === '1') {
             const data = {
@@ -48,6 +49,10 @@ export default function Login() {
                     })
                 })
                 .finally(() => setLoadingSubmit(false))
+            localStorage.setItem('num', 1);
+            const use = window.localStorage.getItem('num')
+            dispatch(login({ type: use }))
+
         } else if (type === '0') {
             const data = {
                 "phoneNumber": phone,
@@ -78,6 +83,9 @@ export default function Login() {
                     })
                 })
                 .finally(() => setLoadingSubmit(false))
+            localStorage.setItem('num'," 2");
+            const use = window.localStorage.getItem('num')
+            dispatch(login({ type: use }))
         }
         // navigate("/dashboard")
     }
