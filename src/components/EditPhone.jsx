@@ -34,25 +34,64 @@ export default function EditPhone() {
 
     const isSendSms = () => {
         if (localStorage.getItem('num') === "1") {
+            if (editPhone.length === 12) {
+                const data = {
+                    "newPhoneNumber": editPhone,
+                    "smsSignature": editSms
+                }
+                axios.post("http://144.91.97.115:9090/api/v1/customer/Manage/ChangePhoneConfirmation", data, { headers: { "Authorization": `Bearer ${localStorage.getItem('token')}` } })
+                    .then(res => {
+                        console.log(res)
+                        handleClickOpen()
+                    }).catch(err => {
+                        Swal.fire({
+                            title: 'Error',
+                            text: err.response.data.result,
+                            icon: 'error',
+                            confirmButtonText: 'OK'
+                        })
+                    })
+            }
+            else {
+                Swal.fire({
+                    title: 'Error',
+                    text: "Numaranız 12 haneli olmalıdır!",
+                    icon: 'error',
+                    confirmButtonText: 'OK'
+                })
+            }
+
+
+
+
+        }
+        else if (localStorage.getItem('num') === "2") {
             const data = {
                 "newPhoneNumber": editPhone,
                 "smsSignature": editSms
             }
-            axios.post("http://144.91.97.115:9090/api/v1/customer/Manage/ChangePhoneConfirmation", data, { headers: { "Authorization": `Bearer ${localStorage.getItem('token')}` } })
-                .then(res => {
-                    console.log(res)
-                    handleClickOpen()
-                }).catch(err => {
-                    Swal.fire({
-                        title: 'Error',
-                        text: err.response.data.result,
-                        icon: 'error',
-                        confirmButtonText: 'OK'
+            if (editPhone.length === 12) {
+                axios.post("http://144.91.97.115:9090/api/v1/driver/Manage/ChangePhoneConfirmation", data, { headers: { "Authorization": `Bearer ${localStorage.getItem('token')}` } })
+                    .then(res => {
+                        console.log(res)
+                        handleClickOpen()
+                    }).catch(err => {
+                        Swal.fire({
+                            title: 'Error',
+                            text: err.response.data.result,
+                            icon: 'error',
+                            confirmButtonText: 'OK'
+                        })
                     })
+
+            } else {
+                Swal.fire({
+                    title: 'Error',
+                    text: "Numaranız 12 haneli olmalıdır!",
+                    icon: 'error',
+                    confirmButtonText: 'OK'
                 })
-
-
-
+            }
         }
     }
     const isChangePhone = () => {
@@ -62,6 +101,31 @@ export default function EditPhone() {
                 "code": editSms
             }
             axios.post("http://144.91.97.115:9090/api/v1/customer/Manage/ChangePhone", data, { headers: { "Authorization": `Bearer ${localStorage.getItem('token')}` } })
+                .then(res => {
+                    console.log(res)
+                    handleClose()
+                    Swal.fire(
+                        'Başarılı!',
+                        'Numaranız deyiştirildi!',
+                        'success'
+                    )
+                    navigate("/dashboard")
+
+                }).catch(err => {
+                    Swal.fire({
+                        title: 'Error',
+                        text: err.response.data.result,
+                        icon: 'error',
+                        confirmButtonText: 'OK'
+                    })
+                })
+        }
+        else if (localStorage.getItem('num') === "2") {
+            const data = {
+                "newPhoneNumber": editPhone,
+                "code": editSms
+            }
+            axios.post("http://144.91.97.115:9090/api/v1/driver/Manage/ChangePhone", data, { headers: { "Authorization": `Bearer ${localStorage.getItem('token')}` } })
                 .then(res => {
                     console.log(res)
                     handleClose()

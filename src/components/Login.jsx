@@ -83,7 +83,7 @@ export default function Login() {
                     })
                 })
                 .finally(() => setLoadingSubmit(false))
-            localStorage.setItem('num'," 2");
+            localStorage.setItem('num', 2);
             const use = window.localStorage.getItem('num')
             dispatch(login({ type: use }))
         }

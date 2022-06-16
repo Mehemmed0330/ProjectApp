@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+// import { NavLink, Link } from 'react-router-dom';
 import { useSelector } from "react-redux"
 import { selectUser } from "../redux/userSlice"
 import UserNavbar from './UserNavbar';
@@ -19,7 +19,7 @@ export default function Sidebar() {
     const user = useSelector(selectUser)
 
     const [showSidebar, setShowSidebar] = useState('-left-64');
-    const [index, setIndex] = useState(0);
+    const [indexPage, setIndex] = useState(0);
     const link = [
         { name: "Account info", to: 0 },
         { name: "Active orders", to: 1 },
@@ -48,14 +48,11 @@ export default function Sidebar() {
                 className={`h-screen absolute top-0 md:left-0 ${showSidebar} overflow-y-auto flex-row flex-nowrap overflow-hidden shadow-xl bg-white w-64 z-10 py-4 px-6 transition-all duration-300`} style={{ position: 'absolute', top: '118px' }}
             >
                 <div className="flex-col items-stretch min-h-full flex-nowrap px-0 relative">
-                    <a
-                        href="https://material-tailwind.com?ref=mtd"
-                        target="_blank"
-                        rel="noreferrer"
+                    <div
                         className="mt-2 text-center w-full inline-block"
                     >
                         <h1 color="gray">{user.firstName} {user.lastName}</h1>
-                    </a>
+                    </div>
                     <div className="flex flex-col">
                         <hr className="my-4 min-w-full" />
 
@@ -63,6 +60,10 @@ export default function Sidebar() {
                             {link.map((page, index) =>
                                 <li
                                     onClick={() => setIndex(page.to)}
+                                    style={{
+                                        backgroundColor: indexPage === page.to ? "black" : "white",
+                                        color: indexPage === page.to ? "rgb(253,224,71)" : "black"
+                                    }}
                                     key={index}
                                     className="flex items-center justify-center gap-4 text-sm text-gray-700 font-semibold px-4 py-3  rounded-lg mb-4 hover:bg-yellow-300 cursor-pointer"
                                 >
@@ -104,19 +105,19 @@ export default function Sidebar() {
                     </div>
                 </div>
             </div>
-            <div hidden={index !== 0}>
+            <div hidden={indexPage !== 0}>
                 <AccountInfo />
             </div>
-            <div hidden={index !== 1}>
+            <div hidden={indexPage !== 1}>
                 <ActiveOrders />
             </div>
-            <div hidden={index !== 2}>
+            <div hidden={indexPage !== 2}>
                 <OrderHistory />
             </div>
-            <div hidden={index !== 3}>
+            <div hidden={indexPage !== 3}>
                 <SavedAddresses />
             </div>
-            <div hidden={index !== 4}>
+            <div hidden={indexPage !== 4}>
                 <ChangePassword />
             </div>
         </div>

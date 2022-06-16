@@ -92,7 +92,7 @@ export default function Header() {
                                         isActive ? { backgroundColor: "rgb(253,224,71)", color: "black" } : undefined
                                     } key={index} className="block text-yellow-300 xl:px-1 xl:py-4 xl:mx-1 font-semibold hover:bg-yellow-300 transition ease-in hover:text-black p-1 text-center">{page.name}</NavLink>
                             )}
-                            {user ? null :
+                            {localStorage.getItem('token') ? null :
                                 <NavLink onClick={() => setOpenMenu(false)} to={"/driver"}
                                     style={({ isActive }) =>
                                         isActive ? { backgroundColor: "rgb(253,224,71)", color: "black" } : undefined
@@ -159,7 +159,7 @@ export default function Header() {
                                     ))}
                                 </Menu>
                             </div>
-                            {user ? <NavLink onClick={() => setOpenMenu(false)} to={`/dashboard`}
+                            {localStorage.getItem('token') ? <NavLink onClick={() => setOpenMenu(false)} to={`/dashboard`}
                                 style={({ isActive }) =>
                                     isActive ? { backgroundColor: "rgb(253,224,71)", color: "black" } : undefined
                                 } className="block text-yellow-300 xl:px-3 xl:py-4 xl:mx-1 font-semibold hover:bg-yellow-300 transition ease-in hover:text-black p-1 text-center">Profil</NavLink> :
