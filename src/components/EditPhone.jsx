@@ -157,7 +157,7 @@ export default function EditPhone() {
             <form className="w-full max-w-sm mx-auto">
                 <div className="md:flex md:items-center mb-6">
                     <div className="md:w-1/3">
-                        <label className="block text-black font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
+                        <label className="block text-black font-bold md:text-right mb-1 md:mb-0 pr-4" htmlFor="inline-full-name">
                             Numara
                         </label>
                     </div>

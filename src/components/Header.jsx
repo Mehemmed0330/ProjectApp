@@ -22,7 +22,6 @@ import { AiOutlineClose } from "react-icons/ai";
 const options = [
     'Azerbaycan',
     'Türkiye',
-
 ];
 
 export default function Header() {
@@ -84,7 +83,7 @@ export default function Header() {
                     <div onClick={() => setOpenMenu(!openMenu)} className="text-3xl text-yellow-300 absolute right-8 top-12 cursor-pointer xl:hidden">
                         {openMenu ? <AiOutlineClose /> : <AiOutlineMenu />}
                     </div>
-                    <div class="w-2/5 xl:w-full mx-auto transition duration-150 ease-out">
+                    <div className="w-2/5 xl:w-full mx-auto transition duration-150 ease-out">
                         <ul className={`sm:block xl:flex  xl:items-center xl:justify-between absolute xl:static bg-black xl:z-auto z-[1] left-0 w-full xl:w-auto transition duration-150 ease-in ${openMenu ? '' : 'top-[-1000px]'}`}>
                             {link.map((page, index) =>
                                 <NavLink onClick={() => setOpenMenu(false)} to={`${page.to}`}
@@ -104,7 +103,7 @@ export default function Header() {
                                         isActive ? { backgroundColor: "rgb(253,224,71)", color: "black" } : undefined
                                     } key={index} className="block text-yellow-300 xl:px-1 xl:py-4 xl:mx-1 font-semibold hover:bg-yellow-300 transition ease-in hover:text-black p-1 text-center">{page.name}</NavLink>
                             )}
-                            <div>
+                            <div style={{ height: "100%" }}>
                                 <List
                                     component="nav"
                                     aria-label="Device settings"
@@ -114,14 +113,13 @@ export default function Header() {
                                         border: "1px solid black",
                                         backgroundColor: "rgb(253,224,71)"
                                     }}
-                                    class="xl:w-full w-1/3 mx-auto xl:z-auto z-[10000]"
+                                    className="xl:w-full w-1/3 mx-auto xl:z-auto z-[10000]"
                                 >
                                     <ListItem
                                         button
                                         id="lock-button"
                                         aria-haspopup="listbox"
                                         aria-controls="lock-menu"
-
                                         aria-expanded={open ? 'true' : undefined}
                                         onClick={handleClickListItem}
                                         className="font-bold text-base bg-yellow-300 p-2 text-center sm:text-left"

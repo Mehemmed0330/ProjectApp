@@ -147,26 +147,26 @@ export default function ForgotPassword() {
 
     return (
         <div className="py-10" style={{ height: "26rem" }}>
-            <form class="w-full max-w-sm py-16 mx-auto" hidden={index !== 0}>
+            <form className="w-full max-w-sm py-16 mx-auto" hidden={index !== 0}>
                 <select value={type} onChange={(e) => setType(e.target.value)}>
                     <option value="0">Bisofor</option>
                     <option value="1">Musteri</option>
                 </select>
-                <div class="md:flex md:items-center mb-6">
-                    <div class="md:w-1/3">
-                        <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
+                <div className="md:flex md:items-center mb-6">
+                    <div className="md:w-1/3">
+                        <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" htmlFor="inline-full-name">
                             Numaranız
                         </label>
                     </div>
-                    <div class="md:w-2/3">
-                        <input onChange={(e) => setPhone(e.target.value)} class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-full-name" type="text" placeholder="+994" />
+                    <div className="md:w-2/3">
+                        <input onChange={(e) => setPhone(e.target.value)} className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-full-name" type="text" placeholder="+994" />
                     </div>
                 </div>
 
-                <div class="md:flex md:items-center">
-                    <div class="md:w-1/3"></div>
-                    <div class="md:w-2/3">
-                        <button onClick={sendPassword} class="shadow bg-yellow-300 hover:bg-yellow-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
+                <div className="md:flex md:items-center">
+                    <div className="md:w-1/3"></div>
+                    <div className="md:w-2/3">
+                        <button onClick={sendPassword} className="shadow bg-yellow-300 hover:bg-yellow-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
                             Submit
                         </button>
                     </div>
@@ -199,32 +199,32 @@ export default function ForgotPassword() {
             </form>
             <div hidden={index !== 1}>
                 <div className="py-10" style={{ height: "26rem" }}>
-                    <form class="w-full max-w-lg py-16 mx-auto">
-                        <div class="md:flex md:items-center mb-6">
-                            <div class="md:w-1/3">
-                                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-password">
+                    <form className="w-full max-w-lg py-16 mx-auto">
+                        <div className="md:flex md:items-center mb-6">
+                            <div className="md:w-1/3">
+                                <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" htmlFor="inline-password">
                                     Password
                                 </label>
                             </div>
-                            <div class="md:w-2/3">
-                                <input onChange={(e) => setNewPassword(e.target.value)} class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-password" type="password" placeholder="******************" />
+                            <div className="md:w-2/3">
+                                <input onChange={(e) => setNewPassword(e.target.value)} className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-password" type="password" placeholder="******************" />
                             </div>
                         </div>
-                        <div class="md:flex md:items-center mb-6">
-                            <div class="md:w-1/3">
-                                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-password">
+                        <div className="md:flex md:items-center mb-6">
+                            <div className="md:w-1/3">
+                                <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" htmlFor="inline-password">
                                     Confirm Password
                                 </label>
                             </div>
-                            <div class="md:w-2/3">
-                                <input onChange={(e) => setNewPassword(e.target.value)} class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-password" type="password" placeholder="******************" />
+                            <div className="md:w-2/3">
+                                <input onChange={(e) => setNewPassword(e.target.value)} className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-password" type="password" placeholder="******************" />
                             </div>
                         </div>
 
-                        <div class="md:flex md:items-center">
-                            <div class="md:w-1/3"></div>
-                            <div class="md:w-2/3">
-                                <button onClick={resetPassword} class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
+                        <div className="md:flex md:items-center">
+                            <div className="md:w-1/3"></div>
+                            <div className="md:w-2/3">
+                                <button onClick={resetPassword} className="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
                                     Submit
                                 </button>
                             </div>

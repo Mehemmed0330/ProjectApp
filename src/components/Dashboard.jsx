@@ -3,7 +3,7 @@ import UserSidebar from './UserSidebar'
 
 export default function Dashboard() {
     return (
-        <div className="h-screen">
+        <div style={{ minHeight: "80vh" }}>
             <UserSidebar />
         </div>
     )

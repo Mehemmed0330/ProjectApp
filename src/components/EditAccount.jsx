@@ -76,7 +76,7 @@ export default function EditAccount() {
             <form className="w-full max-w-lg py-16 mx-auto ">
                 <div className="md:flex md:items-center mb-6">
                     <div className="md:w-1/3">
-                        <label className="block text-black font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-password">
+                        <label className="block text-black font-bold md:text-right mb-1 md:mb-0 pr-4" htmlFor="inline-password">
                             Ad
                         </label>
                     </div>
@@ -86,7 +86,7 @@ export default function EditAccount() {
                 </div>
                 <div className="md:flex md:items-center mb-6">
                     <div className="md:w-1/3">
-                        <label className="block text-black font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-password">
+                        <label className="block text-black font-bold md:text-right mb-1 md:mb-0 pr-4" htmlFor="inline-password">
                             Soyad
                         </label>
                     </div>
@@ -97,7 +97,7 @@ export default function EditAccount() {
 
                 <div className="md:flex md:items-center mb-6">
                     <div className="md:w-1/3">
-                        <label className="block text-black font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-password">
+                        <label className="block text-black font-bold md:text-right mb-1 md:mb-0 pr-4" htmlFor="inline-password">
                             Email
                         </label>
                     </div>

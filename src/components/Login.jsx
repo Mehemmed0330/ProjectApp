@@ -92,38 +92,38 @@ export default function Login() {
 
 
     return (
-        <div class="w-full max-w-30 bg-yellow-300 pb-5  ">
+        <div className="w-full max-w-30 bg-yellow-300 pb-5  ">
 
-            <form onSubmit={handleSubmit} class="bg-yellow-300 shadow-md rounded px-4 pt-6 pb-20 mx-auto md:w-1/2 w-11/12 ">
+            <form onSubmit={handleSubmit} className="bg-yellow-300 shadow-md rounded px-4 pt-6 pb-20 mx-auto md:w-1/2 w-11/12 ">
                 <select className="bg-yellow-200" value={type} onChange={(e) => setType(e.target.value)}>
                     <option value="0">Bisofor</option>
                     <option value="1">Müşteri</option>
                 </select>
-                <div class="mb-4">
-                    <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+                <div className="mb-4">
+                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
                         Numara
                     </label>
-                    <input value={phone} onChange={(e) => setPhone(e.target.value)} class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-yellow-200" id="username" type="text" placeholder="Username" />
+                    <input value={phone} onChange={(e) => setPhone(e.target.value)} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-yellow-200" id="username" type="text" placeholder="Username" />
                 </div>
-                <div class="mb-6 mt-6">
-                    <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+                <div className="mb-6 mt-6">
+                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
                         Kod
                     </label>
-                    <input value={pass} onChange={(e) => setPass(e.target.value)} class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-yellow-200" id="password" type="password" placeholder="******************" />
-                    <p class="text-red-500 text-xs italic">Lütfen bir şifre seçin.</p>
+                    <input value={pass} onChange={(e) => setPass(e.target.value)} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-yellow-200" id="password" type="password" placeholder="******************" />
+                    <p className="text-red-500 text-xs italic">Lütfen bir şifre seçin.</p>
                 </div>
-                <div class="flex items-center justify-between ">
-                    <button disabled={loadingSubmit} class="bg-black  text-yellow-300 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                <div className="flex items-center justify-between ">
+                    <button disabled={loadingSubmit} className="bg-black  text-yellow-300 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                         {loadingSubmit ? 'bekleyin...' : 'Kayıt ol'}
                     </button>
-                    <Link to="/forgotPassword" class=" align-baseline font-bold text-sm text-black  md:mt-0 " href="#">
+                    <Link to="/forgotPassword" className=" align-baseline font-bold text-sm text-black  md:mt-0 " href="#">
                         Parolanızı mı unuttunuz?
                     </Link>
 
                 </div>
 
             </form>
-            {/* <p class="text-center text-gray-500 text-xs">
+            {/* <p className="text-center text-gray-500 text-xs">
                 &copy;2020 Acme Corp. All rights reserved.
             </p> */}
         </div>

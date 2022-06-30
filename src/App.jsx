@@ -18,7 +18,7 @@ import ForgotPassword from "./components/ForgotPassword"
 import ResetPassword from "./components/ResetPassword"
 import EditAccount from "./components/EditAccount"
 import EditPhone from "./components/EditPhone"
-
+import AddressMap from "./components/AddressMap"
 
 
 
@@ -44,7 +44,7 @@ export default function App() {
         {/* <Route path="/accountInfo" element={<AccountInfo />} /> */}
         <Route path="/editAccount" element={<EditAccount />} />
         <Route path="/editPhone" element={<EditPhone />} />
-
+        <Route path="/addressMap" element={<AddressMap />} />
 
         <Route path="/dashboard" element={<Dashboard />} />
         <Route />

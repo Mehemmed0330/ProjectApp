@@ -63,7 +63,6 @@ export default function AccountInfo() {
                 })
         }
     }, [dispatch]);
-
     const isUpdateImage = () => {
         // e.preventDefault();
         // const formData = new FormData();
@@ -86,9 +85,12 @@ export default function AccountInfo() {
 
 
         console.log("updateImage", updateImage)
+        const update = updateImage.split(',')[1]
+        console.log("update", update)
+
         if (localStorage.getItem('num') === "2") {
             const data = {
-                "base64": updateImage
+                "base64": update
             }
             axios.post("http://144.91.97.115:9090/api/v1/driver/Manage/UpdateDriverPhoto", data, {
                 headers: {
@@ -99,7 +101,8 @@ export default function AccountInfo() {
                 }
             })
                 .then(res => {
-                    console.log(res.result)
+                    console.log(res)
+                    alert("Deyisdirildi")
                 }).catch(err => {
                     Swal.fire({
                         title: 'Error',
@@ -110,13 +113,12 @@ export default function AccountInfo() {
                 })
 
         }
-        console.log(updateImage)
     }
 
 
     return (
         <div className="pl-72 pr-2 ">
-            <div class="text-center">
+            <div className="text-center">
                 {localStorage.getItem('num') === '2' ? <img
                     src={!updateImage ? `data:image/jpeg;base64,${user.pic}` : updateImage}
                     className="rounded-full w-32 h-32 mb-2 mx-auto"
@@ -124,7 +126,7 @@ export default function AccountInfo() {
                 /> :
                     <img
                         src="https://mdbcdn.b-cdn.net/img/new/avatars/8.webp"
-                        class="rounded-full w-32 mb-4 mx-auto"
+                        className="rounded-full w-32 mb-4 mx-auto"
                         alt="Avatar"
                     />}
                 {/* <div className="mb-4"> */}
@@ -135,6 +137,7 @@ export default function AccountInfo() {
                     <br />
                     <div>
                         <FileBase64
+                            type="file"
                             multiple={false}
                             onDone={({ base64 }) => setUpdateImage(base64)} />
                     </div>

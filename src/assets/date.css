@@ -1,0 +1,7 @@
+.react-datepicker-wrapper {
+    width: auto !important;
+}
+
+.css-nxo287-MuiInputBase-input-MuiOutlinedInput-input:focus {
+    box-shadow: none;
+}

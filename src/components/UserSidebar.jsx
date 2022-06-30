@@ -45,7 +45,7 @@ export default function Sidebar() {
                 setShowSidebar={setShowSidebar}
             />
             <div
-                className={`h-screen absolute top-0 md:left-0 ${showSidebar} overflow-y-auto flex-row flex-nowrap overflow-hidden shadow-xl bg-white w-64 z-10 py-4 px-6 transition-all duration-300`} style={{ position: 'absolute', top: '118px' }}
+                className={`absolute top-0 md:left-0 ${showSidebar} overflow-y-auto flex-row flex-nowrap overflow-hidden shadow-xl bg-white w-64 z-10 py-4 px-6 transition-all duration-300`} style={{ minHeight: "80vh", position: 'absolute', top: '118px' }}
             >
                 <div className="flex-col items-stretch min-h-full flex-nowrap px-0 relative">
                     <div
