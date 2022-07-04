@@ -86,7 +86,7 @@ export default function ChangePassword() {
     }
 
     return (
-        <div className="pl-72 pr-2 ">
+        <div className="pl-72 pr-2 pt-16">
             <form className="w-full max-w-lg py-16 mx-auto">
                 <div className="md:flex md:items-center mb-6">
                     <div className="md:w-1/3">

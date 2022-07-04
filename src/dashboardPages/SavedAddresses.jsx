@@ -109,7 +109,7 @@ const SavedAddresses = () => {
     // AutoComplate search input
 
 
-
+    console.log(addressData != null && addressData.length > 1 ? "hello" : "bye")
 
 
 
@@ -122,7 +122,7 @@ const SavedAddresses = () => {
 
 
     return (
-        <div className="pl-72 pr-7 ">
+        <div className="pl-72 pr-7 pt-16 ">
             <Dialog
                 open={openDelete}
                 onClose={handleCloseDelete}
@@ -144,8 +144,8 @@ const SavedAddresses = () => {
                     </Button>
                 </DialogActions>
             </Dialog>
-            {addressData.length > 0 ? addressData?.map((address, index) =>
-                <div key={address.id} className="p-6 mb-5  bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+            {addressData != null && addressData.length > 0 ? addressData?.map((address, index) =>
+                <div key={address.id} className="p-6 mb-5  bg-white rounded-lg border border-gray-200 shadow-md">
 
                     <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{address.shortName}</h5>
 
@@ -155,9 +155,7 @@ const SavedAddresses = () => {
                         <AiFillDelete className="ml-2 -mr-1 w-4 h-4" />
                     </button>
                 </div>
-            ) : <>
-                <GiCardboardBox className="text-9xl mx-auto h-96" />
-            </>}
+            ) : <GiCardboardBox className="text-9xl mx-auto h-96" />}
 
             <button onClick={handleClickOpen} className="absolute bottom-20 right-20 bg-yellow-300 hover:bg-yellow-400 text-black font-bold py-5 px-5 rounded-full">
                 <AiOutlinePlus className="text-xl font-semibold	" />

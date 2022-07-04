@@ -114,10 +114,8 @@ export default function AccountInfo() {
 
         }
     }
-
-
     return (
-        <div className="pl-72 pr-2 ">
+        <div className="pl-72 pr-2 pt-16">
             <div className="text-center">
                 {localStorage.getItem('num') === '2' ? <img
                     src={!updateImage ? `data:image/jpeg;base64,${user.pic}` : updateImage}

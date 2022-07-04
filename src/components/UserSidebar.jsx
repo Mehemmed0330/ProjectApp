@@ -24,11 +24,14 @@ export default function Sidebar() {
         { name: "Account info", to: 0 },
         { name: "Active orders", to: 1 },
         { name: "Order history", to: 2 },
-        { name: "Saved addresses", to: 3 },
+        // { name: localStorage.getItem('num') === "1" ? "Saved addresses" : null, to: localStorage.getItem('num') === "1" ? 3 : null },
         { name: "Change password", to: 4 },
-
-
     ]
+
+    if (localStorage.getItem('num') === "1") {
+        link.push({ name: "Saved addresses", to: 3 })
+    }
+
     const navigate = useNavigate()
 
     const logout = () => {
@@ -40,10 +43,10 @@ export default function Sidebar() {
     }
     return (
         <div>
-            <UserNavbar
+            {/* <UserNavbar
                 showSidebar={showSidebar}
                 setShowSidebar={setShowSidebar}
-            />
+            /> */}
             <div
                 className={`absolute top-0 md:left-0 ${showSidebar} overflow-y-auto flex-row flex-nowrap overflow-hidden shadow-xl bg-white w-64 z-10 py-4 px-6 transition-all duration-300`} style={{ minHeight: "80vh", position: 'absolute', top: '118px' }}
             >
@@ -71,6 +74,7 @@ export default function Sidebar() {
                                     {page.name}
                                 </li>
                             )}
+
                             <button onClick={logout} className="flex items-center justify-center gap-4 text-sm text-gray-700 font-semibold px-4 py-3  rounded-lg mb-4 hover:bg-yellow-300 cursor-pointer">
                                 Logout
                             </button>
@@ -114,9 +118,12 @@ export default function Sidebar() {
             <div hidden={indexPage !== 2}>
                 <OrderHistory />
             </div>
-            <div hidden={indexPage !== 3}>
+
+            {localStorage.getItem('num') === "1" && <div hidden={indexPage !== 3}>
                 <SavedAddresses />
-            </div>
+            </div>}
+
+
             <div hidden={indexPage !== 4}>
                 <ChangePassword />
             </div>
