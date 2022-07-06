@@ -61,20 +61,8 @@ function AddressMap({ handleClose }) {
     const [draggable, setDraggable] = useState(true)
     const [position, setPosition] = useState(center)
     const markerRef = useRef(null)
-    const eventHandlers = useMemo(
-        () => ({
-            dragend() {
-                const marker = markerRef.current
-                if (marker != null) {
-                    setPosition(marker.getLatLng())
-                }
-            },
-        }),
-        [],
-    )
-    const toggleDraggable = useCallback(() => {
-        setDraggable((d) => !d)
-    }, [])
+
+
 
 
 
@@ -145,9 +133,10 @@ function AddressMap({ handleClose }) {
     // };
 
 
-    const { isLoaded } = useJsApiLoader({
-        googleMapsApiKey: "AIzaSyCJyopg1dehOqR9LpxtLEaZ5p4JdwkwL0g"
-    })
+    // const { isLoaded } = useJsApiLoader({
+    //     googleMapsApiKey: "AIzaSyCJyopg1dehOqR9LpxtLEaZ5p4JdwkwL0g",
+    //     // libraries: ['places'],
+    // })
 
     // useEffect(() => {
     //     dispatch(setAddress({
@@ -206,6 +195,9 @@ function AddressMap({ handleClose }) {
         }
 
     }
+    // if (!isLoaded) {
+    //     return <p>Loading</p>
+    // }
 
 
 

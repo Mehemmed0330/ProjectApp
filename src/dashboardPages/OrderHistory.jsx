@@ -97,30 +97,41 @@ export default function OrderHistory() {
                                 <img class="w-12 h-12 rounded-full" src="https://mdbcdn.b-cdn.net/img/new/avatars/8.webp" alt="Neil image" />
                             </div>
                             <div class="w-9/12">
-                                <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
-                                    {item.driverFirstname} {item.driverLastname}
-                                </p>
-                                <p class="text-sm text-gray-500 truncate dark:text-gray-400">
-                                    {item.driverPhoneNumber}
-                                </p>
+                                {localStorage.getItem('num') === "1" ?
+                                    <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                        {item.driverFirstname} {item.driverLastname}
+                                    </p> :
+                                    <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                        {item.customerFirstname}  {item.customerLastname}
+                                    </p>
+                                }
+                                {localStorage.getItem('num') === "1" ?
+                                    <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                                        {item.driverPhoneNumber}
+                                    </p> :
+                                    <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                                        {item.customerPhoneNumber}
+                                    </p>
+                                }
                             </div>
                             <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
                                 $320
                             </div>
                         </div>
-                        <p className="mx-auto my-5 w-[56rem] text-sm font-medium text-gray-900 truncate">
+                        <p className="mx-auto my-2 w-[56rem] text-sm font-medium text-gray-900 truncate">
                             {item.receiptTime}
                         </p>
-                        <p className="mx-auto my-5 w-[56rem] text-sm font-medium text-gray-900 truncate">
+                        <p className="mx-auto my-2 w-[56rem] text-sm font-medium text-gray-900 truncate">
                             Status: {item.status}
                         </p>
-                        <p className="mx-auto my-5 w-[56rem] text-sm font-medium text-gray-900 truncate">
-                            Sipariş türü: {item.orderType}
-                        </p>
-                        <p className="mx-auto my-5 w-[56rem] text-sm font-medium text-gray-900 truncate">
+                        {localStorage.getItem('num') === "1" ?
+                            <p className="mx-auto my-2 w-[56rem] text-sm font-medium text-gray-900 truncate">
+                                Sipariş türü: {item.orderType}
+                            </p> : null}
+                        <p className="mx-auto my-2 w-[56rem] text-sm font-medium text-gray-900 truncate">
                             Ödeme şekli: {item.paymentMethod}
                         </p>
-                        <p className=" mx-auto my-5 w-[50rem] text-sm font-medium text-gray-900 truncate">Nereden nereye:</p>
+                        <p className=" mx-auto my-2 w-[50rem] text-sm font-medium text-gray-900 truncate">Nereden nereye:</p>
                         <div className="flex items-center mx-28">
                             <p className="text-sm font-medium text-gray-900">
                                 {item.addresses[0].addressText}

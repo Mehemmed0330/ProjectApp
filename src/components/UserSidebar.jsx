@@ -2,12 +2,13 @@ import { useState } from 'react';
 // import { NavLink, Link } from 'react-router-dom';
 import { useSelector } from "react-redux"
 import { selectUser } from "../redux/userSlice"
-import UserNavbar from './UserNavbar';
+// import UserNavbar from './UserNavbar';
 import AccountInfo from "../dashboardPages/AccountInfo";
 import ActiveOrders from '../dashboardPages/ActiveOrders';
 import OrderHistory from '../dashboardPages/OrderHistory';
 import SavedAddresses from '../dashboardPages/SavedAddresses';
 import ChangePassword from '../dashboardPages/ChangePassword';
+import OrderTaxi from "../dashboardPages/OrderTaxi";
 import { useNavigate } from "react-router-dom"
 
 
@@ -30,6 +31,7 @@ export default function Sidebar() {
 
     if (localStorage.getItem('num') === "1") {
         link.push({ name: "Saved addresses", to: 3 })
+        link.push({ name: "Order Taxi", to: 5 })
     }
 
     const navigate = useNavigate()
@@ -126,6 +128,9 @@ export default function Sidebar() {
 
             <div hidden={indexPage !== 4}>
                 <ChangePassword />
+            </div>
+            <div hidden={indexPage !== 5}>
+                <OrderTaxi />
             </div>
         </div>
     );
