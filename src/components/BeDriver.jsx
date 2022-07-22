@@ -5,7 +5,8 @@ import { useState } from "react"
 // import { AiOutlineCalendar } from "react-icons/ai"
 import FileBase64 from 'react-file-base64';
 import Swal from 'sweetalert2'
-
+import { Link } from "react-router-dom"
+import Privay from "./Privacy"
 export default function BeDriver() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -234,7 +235,12 @@ export default function BeDriver() {
                     <button disabled={loadingSubmit} type="submit" className="text-yellow-300 bg-black  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                         {loadingSubmit ? 'Bekleyin...' : 'Gönder'}
                     </button>
+
                 </form>
+                <div className="mt-5">
+                    <Link to="/apiPrivacyPolicy" className="mt-5 text-yellow-300 bg-black  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm  sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Policy and Privacy</Link>
+
+                </div>
             </div>
         </div>
 

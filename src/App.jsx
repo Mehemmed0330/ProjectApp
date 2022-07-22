@@ -19,6 +19,7 @@ import ResetPassword from "./components/ResetPassword"
 import EditAccount from "./components/EditAccount"
 import EditPhone from "./components/EditPhone"
 import AddressMap from "./components/AddressMap"
+import Privacy from "./components/Privacy"
 
 
 
@@ -41,6 +42,7 @@ export default function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/forgotPassword" element={<ForgotPassword />} />
         <Route path="/resetPassword" element={<ResetPassword />} />
+        <Route path="/apiPrivacyPolicy" element={<Privacy />} />
         {/* <Route path="/accountInfo" element={<AccountInfo />} /> */}
         <Route path="/editAccount" element={<EditAccount />} />
         <Route path="/editPhone" element={<EditPhone />} />

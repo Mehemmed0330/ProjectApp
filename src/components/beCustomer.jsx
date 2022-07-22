@@ -5,6 +5,8 @@ import axios from "axios"
 import Swal from 'sweetalert2'
 import Login from './Login'
 import "../assets/customer.css"
+import Privacy from './Privacy'
+import { Link } from 'react-router-dom'
 
 
 export default function beCustomer() {
@@ -167,9 +169,14 @@ export default function beCustomer() {
                         {loadingSubmit ? 'Bekleyin...' : 'Sunmak'}
 
                     </button>
-                </form>
 
+                </form>
+                <div className="mt-5">
+                    <Link to="/apiPrivacyPolicy" className="mt-5 text-yellow-300 bg-black  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm  sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Policy and Privacy</Link>
+
+                </div>
             </div>
+
             <div hidden={index !== 1}>
                 <Login />
             </div>

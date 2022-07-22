@@ -7,6 +7,7 @@ import { useSelector } from "react-redux"
 import { setAddress } from "../redux/addressSlice"
 import axios from "axios"
 import useGeolocation from 'react-hook-geolocation'
+import Swal from 'sweetalert2'
 
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
@@ -15,6 +16,7 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
+import { useNavigate } from "react-router-dom"
 
 
 
@@ -37,13 +39,13 @@ const containerStyle = {
 
 
 
-function AddressMap({ handleClose }) {
+function AddressMap() {
     const dispatch = useDispatch();
     // const onGeolocationUpdate = geolocation => {
     //     console.log('Here’s some new data from the Geolocation API: ', geolocation)
     // }
     const geolocation = useGeolocation();
-    console.log(geolocation);
+    console.log(+geolocation.latitude);
 
 
     const addressData = useSelector(selectAddress)
@@ -51,6 +53,12 @@ function AddressMap({ handleClose }) {
     const [map, setMap] = React.useState(null)
     const [addressComplate, setAddressComplate] = useState("")
     const [cardAddress, setCardAddress] = useState("");
+    const [open, setOpen] = React.useState(false);
+    const navigate = useNavigate()
+
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
     const [coordinates, setCoordinates] = useState({
         lat: null,
         lng: null
@@ -66,21 +74,21 @@ function AddressMap({ handleClose }) {
 
 
 
-    Geocode.setApiKey("AIzaSyCJyopg1dehOqR9LpxtLEaZ5p4JdwkwL0g");
-    Geocode.setLanguage("az");
-    Geocode.setRegion("az");
-    Geocode.setLocationType("ROOFTOP");
-    Geocode.enableDebug();
-    Geocode.fromLatLng(+geolocation.latitude, +geolocation.longitude).then(
-        (response) => {
-            const address = response.results[1].formatted_address || response.results[0].formatted_address;
-            setCardAddress(address);
-        },
-        (error) => {
-            console.error(error);
-        }
-    );
-    console.log(cardAddress)
+    // Geocode.setApiKey("AIzaSyCJyopg1dehOqR9LpxtLEaZ5p4JdwkwL0g");
+    // Geocode.setLanguage("az");
+    // Geocode.setRegion("az");
+    // Geocode.setLocationType("ROOFTOP");
+    // Geocode.enableDebug();
+    // Geocode.fromLatLng(+geolocation.latitude, +geolocation.longitude).then(
+    //     (response) => {
+    //         const address = response.results[1].formatted_address || response.results[0].formatted_address;
+    //         setCardAddress(address);
+    //     },
+    //     (error) => {
+    //         console.error(error);
+    //     }
+    // );
+    // console.log(cardAddress)
 
     // Geocode.fromLatLng(geolocation.latitude, geolocation.longitude).then(
     //     (response) => {
@@ -121,11 +129,6 @@ function AddressMap({ handleClose }) {
     const onUnmount = React.useCallback(function callback(map) {
         setMap(null)
     }, [])
-    const [open, setOpen] = React.useState(false);
-
-    const handleClickOpen = () => {
-        setOpen(true);
-    };
 
 
     // const handleClose = () => {
@@ -144,7 +147,9 @@ function AddressMap({ handleClose }) {
     //         locationLongitude: +geolocation.longitude
     //     }))
     // }, [dispatch, geolocation]);
-
+    const handleClose = () => {
+        setOpen(false);
+    };
 
     const handleSelect = async value => {
         const results = await geocodeByAddress(value)
@@ -185,7 +190,12 @@ function AddressMap({ handleClose }) {
                             .then(res => {
                                 console.log(res.data.result)
                                 dispatch(setAddress(res.data.result))
-                                handleClose()
+                                Swal.fire(
+                                    'Adres Kaydedildi!',
+                                    '',
+                                    'success'
+                                )
+                                navigate("/dashboard")
                             })
                     }
                 })
@@ -202,7 +212,7 @@ function AddressMap({ handleClose }) {
 
 
     return <>
-        <div className="absolute top-2 flex  right-5" style={{ zIndex: "2000", }}>
+        <div className="absolute top-32 flex  right-5" style={{ zIndex: "2000", }}>
             <PlacesAutocomplete
                 value={addressComplate}
                 onChange={setAddressComplate}
@@ -276,10 +286,15 @@ function AddressMap({ handleClose }) {
         </div>
 
         <GoogleMap
-
             mapContainerStyle={containerStyle}
             center={{ lat: !coordinates.lat ? +geolocation.latitude : coordinates.lat, lng: !coordinates.lng ? +geolocation.longitude : coordinates.lng }}
             zoom={15}
+            options={{
+                zoomControl: false,
+                streetViewControl: false,
+                mapTypeControl: false,
+                fullscreenControl: false,
+            }}
         // onUnmount={onUnmount}
         >
             {coordinates.lat ? <Marker

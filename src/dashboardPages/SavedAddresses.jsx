@@ -30,6 +30,8 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContentText from '@mui/material/DialogContentText';
 
+import useGeolocation from 'react-hook-geolocation'
+import { useNavigate } from "react-router-dom"
 
 
 
@@ -45,7 +47,7 @@ const SavedAddresses = () => {
     const [openDelete, setOpenDelete] = React.useState(false);
 
     const [deletingId, setDeletingId] = React.useState("");
-
+    const navigate = useNavigate()
     // const [inputLocationLat, setInputLocationLat] = useState(null)
     // const [inputLocationLng, setInputLocationLng] = useState(null)
 
@@ -55,15 +57,6 @@ const SavedAddresses = () => {
 
 
     const [open, setOpen] = React.useState(false);
-    useEffect(() => {
-        if (localStorage.getItem('num') === "1") {
-            axios.get("http://144.91.97.115:9090/api/v1/customer/Manage/Addresses", { headers: { "Authorization": `Bearer ${localStorage.getItem('token')}` } })
-                .then(res => {
-                    setAddressData(res.data.result)
-                    dispatch(setAddress(res.data.result))
-                })
-        }
-    }, [dispatch]);
 
     const handleClickOpen = () => {
         setOpen(true);
@@ -79,6 +72,19 @@ const SavedAddresses = () => {
     const handleCloseDelete = () => {
         setOpenDelete(false);
     };
+
+
+    useEffect(() => {
+        if (localStorage.getItem('num') === "1") {
+            axios.get("http://144.91.97.115:9090/api/v1/customer/Manage/Addresses", { headers: { "Authorization": `Bearer ${localStorage.getItem('token')}` } })
+                .then(res => {
+                    setAddressData(res.data.result)
+                    dispatch(setAddress(res.data.result))
+                })
+        }
+    }, [dispatch]);
+
+
     const deleteAddress = () => {
         console.log("deletingId", deletingId)
         if (deletingId) {
@@ -109,20 +115,11 @@ const SavedAddresses = () => {
     // AutoComplate search input
 
 
-    console.log(addressData != null && addressData.length > 1 ? "hello" : "bye")
-
-
-
-
-
-
-
-
 
 
 
     return (
-        <div className="pl-72 pr-7 pt-16 ">
+        <div className="pl-72 pr-2 pt-10" style={{ overflowY: "scroll", height: "80vh" }}>
             <Dialog
                 open={openDelete}
                 onClose={handleCloseDelete}
@@ -157,10 +154,14 @@ const SavedAddresses = () => {
                 </div>
             ) : <GiCardboardBox className="text-9xl mx-auto h-96" />}
 
-            <button onClick={handleClickOpen} className="absolute bottom-20 right-20 bg-yellow-300 hover:bg-yellow-400 text-black font-bold py-5 px-5 rounded-full">
+
+
+
+
+            <button onClick={() => navigate("/addressMap")} className="absolute bottom-20 right-20 bg-yellow-300 hover:bg-yellow-400 text-black font-bold py-5 px-5 rounded-full">
                 <AiOutlinePlus className="text-xl font-semibold	" />
             </button>
-            {open && <Dialog
+            {/* {open && +geolocation.latitude ? < Dialog
                 fullScreen
                 open={open}
                 onClose={handleClose}
@@ -184,12 +185,12 @@ const SavedAddresses = () => {
                     </Toolbar>
                 </AppBar>
                 <AddressMap handleClose={handleClose} />
+            </Dialog> : null
+
+            } */}
 
 
-            </Dialog>}
-
-
-        </div>
+        </div >
     );
 }
 
